@@ -118,5 +118,9 @@ Shows how many places the letter/s are moved using the interactable rotors, show
 
 <img width="966" height="1227" alt="image" src="https://github.com/user-attachments/assets/16c40c04-0cf2-48bc-9a5c-8aa053498365" />
 
+## **Inspiration and References**
+
+[Enigma Machine Emulator](https://www.101computing.net/enigma-machine-emulator/)
+
 _all are subject to change until the final submission._ 
 
