@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2048" height="1024" viewBox="0 0 2048 1024">
+  <rect width="2048" height="1024" fill="#f2f2f2"/>
+  <rect x="120" y="120" width="1808" height="784" rx="32" fill="#fffdf8" stroke="#c0b4a0" stroke-width="8"/>
+  <rect x="240" y="240" width="520" height="320" rx="24" fill="#d8d6d3"/>
+  <rect x="840" y="240" width="520" height="320" rx="24" fill="#c7c7c7"/>
+  <rect x="1440" y="240" width="300" height="320" rx="24" fill="#e8d8b3"/>
+  <text x="1024" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="72" fill="#1e1e1e">Classical Ciphers</text>
+  <text x="1024" y="610" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" fill="#4c4c4c">Panorama placeholder</text>
+</svg>

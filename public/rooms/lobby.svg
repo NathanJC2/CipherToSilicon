@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2048" height="1024" viewBox="0 0 2048 1024">
+  <rect width="2048" height="1024" fill="#f8efe0"/>
+  <rect x="120" y="120" width="1808" height="784" rx="32" fill="#fffdf8" stroke="#d0b98c" stroke-width="8"/>
+  <rect x="240" y="260" width="420" height="260" rx="24" fill="#e9d2a7"/>
+  <rect x="760" y="260" width="420" height="260" rx="24" fill="#d9c4aa"/>
+  <rect x="1280" y="260" width="420" height="260" rx="24" fill="#e6dccb"/>
+  <rect x="300" y="620" width="1180" height="120" rx="24" fill="#e1d5c0"/>
+  <text x="1024" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="72" fill="#2f2418">Entrance Lobby</text>
+  <text x="1024" y="610" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" fill="#5f4d39">Panorama placeholder</text>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2048" height="1024" viewBox="0 0 2048 1024">
+  <rect width="2048" height="1024" fill="#f2ece3"/>
+  <rect x="120" y="120" width="1808" height="784" rx="32" fill="#fffdf8" stroke="#b8a07d" stroke-width="8"/>
+  <rect x="220" y="220" width="300" height="420" rx="24" fill="#d1d8e0"/>
+  <rect x="620" y="220" width="300" height="420" rx="24" fill="#cdae84"/>
+  <rect x="1020" y="220" width="300" height="420" rx="24" fill="#d8c5a2"/>
+  <rect x="1420" y="220" width="300" height="420" rx="24" fill="#e7e1d6"/>
+  <text x="1024" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="72" fill="#2f2418">Modern Cryptography</text>
+  <text x="1024" y="610" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" fill="#5f4d39">Panorama placeholder</text>
+</svg>

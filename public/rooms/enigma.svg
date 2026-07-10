@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2048" height="1024" viewBox="0 0 2048 1024">
+  <rect width="2048" height="1024" fill="#e8e8e8"/>
+  <rect x="120" y="120" width="1808" height="784" rx="32" fill="#fffdf8" stroke="#b6ab98" stroke-width="8"/>
+  <rect x="360" y="250" width="500" height="360" rx="28" fill="#1f1f1f"/>
+  <rect x="980" y="250" width="520" height="220" rx="24" fill="#d6d0c6"/>
+  <rect x="980" y="520" width="520" height="120" rx="24" fill="#c9b6a0"/>
+  <text x="1024" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="72" fill="#1a1a1a">Enigma Gallery</text>
+  <text x="1024" y="610" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" fill="#4f4f4f">Panorama placeholder</text>
+</svg>

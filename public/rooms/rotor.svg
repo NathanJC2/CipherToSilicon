@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2048" height="1024" viewBox="0 0 2048 1024">
+  <rect width="2048" height="1024" fill="#efeadf"/>
+  <rect x="120" y="120" width="1808" height="784" rx="32" fill="#fffdfa" stroke="#cdbb92" stroke-width="8"/>
+  <circle cx="720" cy="430" r="220" fill="#323232"/>
+  <circle cx="1320" cy="430" r="180" fill="#bfa272"/>
+  <rect x="440" y="680" width="1180" height="120" rx="24" fill="#e8deca"/>
+  <text x="1024" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="72" fill="#2f2418">Rotor Gallery</text>
+  <text x="1024" y="610" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" fill="#5f4d39">Panorama placeholder</text>
+</svg>
