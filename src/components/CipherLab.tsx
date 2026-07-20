@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 import CaesarCipher from './CaesarCipher';
 import VigenereCipher from './VigenereCipher';
 import EnigmaMachine from './EnigmaMachine';
+import BombeMachine from './BombeMachine';
+import ColossusMachine from './ColossusMachine';
+import Mark1Machine from './Mark1Machine';
+import EniacMachine from './EniacMachine';
+import UnivacMachine from './UnivacMachine';
 
 const CipherLab: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'classical' | 'enigma' | 'bombe' | 'colossus' | 'mark1' | 'eniac' | 'univac'>('classical');
@@ -17,11 +22,11 @@ const CipherLab: React.FC = () => {
       <div className="lab-tabs" role="tablist">
         <button className={`lab-tab ${activeTab === 'classical' ? 'active' : ''}`} onClick={() => setActiveTab('classical')}>Classical Ciphers</button>
         <button className={`lab-tab ${activeTab === 'enigma' ? 'active' : ''}`} onClick={() => setActiveTab('enigma')}>Enigma Machine</button>
-        <button className={`lab-tab ${activeTab === 'bombe' ? 'active' : ''}`} onClick={() => setActiveTab('bombe')}>Bombe <span className="coming-soon-label">(Coming Soon)</span></button>
-        <button className={`lab-tab ${activeTab === 'colossus' ? 'active' : ''}`} onClick={() => setActiveTab('colossus')}>Colossus <span className="coming-soon-label">(Coming Soon)</span></button>
-        <button className={`lab-tab ${activeTab === 'mark1' ? 'active' : ''}`} onClick={() => setActiveTab('mark1')}>Harvard Mark I <span className="coming-soon-label">(Coming Soon)</span></button>
-        <button className={`lab-tab ${activeTab === 'eniac' ? 'active' : ''}`} onClick={() => setActiveTab('eniac')}>ENIAC <span className="coming-soon-label">(Coming Soon)</span></button>
-        <button className={`lab-tab ${activeTab === 'univac' ? 'active' : ''}`} onClick={() => setActiveTab('univac')}>UNIVAC I <span className="coming-soon-label">(Coming Soon)</span></button>
+        <button className={`lab-tab ${activeTab === 'bombe' ? 'active' : ''}`} onClick={() => setActiveTab('bombe')}>Bombe</button>
+        <button className={`lab-tab ${activeTab === 'colossus' ? 'active' : ''}`} onClick={() => setActiveTab('colossus')}>Colossus</button>
+        <button className={`lab-tab ${activeTab === 'mark1' ? 'active' : ''}`} onClick={() => setActiveTab('mark1')}>Harvard Mark I</button>
+        <button className={`lab-tab ${activeTab === 'eniac' ? 'active' : ''}`} onClick={() => setActiveTab('eniac')}>ENIAC</button>
+        <button className={`lab-tab ${activeTab === 'univac' ? 'active' : ''}`} onClick={() => setActiveTab('univac')}>UNIVAC I</button>
       </div>
 
       <div className="lab-tab-panels">
@@ -46,47 +51,32 @@ const CipherLab: React.FC = () => {
         )}
 
         {activeTab === 'bombe' && (
-          <div className="lab-tab-panel coming-soon-panel" id="tab-bombe">
-            <h3>Bombe</h3>
-            <div className="placeholder-image">Historical image placeholder</div>
-            <p>The Bombe helped Allied codebreakers test Enigma settings automatically and accelerated the process of breaking secret messages.</p>
-            <div className="coming-soon-note">Interactive exhibit coming in a future update.</div>
+          <div className="lab-tab-panel active" id="tab-bombe">
+            <BombeMachine />
           </div>
         )}
 
         {activeTab === 'colossus' && (
-          <div className="lab-tab-panel coming-soon-panel" id="tab-colossus">
-            <h3>Colossus</h3>
-            <div className="placeholder-image">Historical image placeholder</div>
-            <p>Colossus was one of the first programmable electronic computers and helped crack Lorenz-encrypted German communications.</p>
-            <div className="coming-soon-note">Interactive exhibit coming in a future update.</div>
+          <div className="lab-tab-panel active" id="tab-colossus">
+            <ColossusMachine />
           </div>
         )}
 
         {activeTab === 'mark1' && (
-          <div className="lab-tab-panel coming-soon-panel" id="tab-mark1">
-            <h3>Harvard Mark I</h3>
-            <div className="placeholder-image">Historical image placeholder</div>
-            <p>The Harvard Mark I was an early electromechanical computer used for scientific calculations during World War II.</p>
-            <div className="coming-soon-note">Interactive exhibit coming in a future update.</div>
+          <div className="lab-tab-panel active" id="tab-mark1">
+            <Mark1Machine />
           </div>
         )}
 
         {activeTab === 'eniac' && (
-          <div className="lab-tab-panel coming-soon-panel" id="tab-eniac">
-            <h3>ENIAC</h3>
-            <div className="placeholder-image">Historical image placeholder</div>
-            <p>ENIAC was one of the first electronic digital computers, built to solve large-scale artillery trajectory and scientific problems.</p>
-            <div className="coming-soon-note">Interactive exhibit coming in a future update.</div>
+          <div className="lab-tab-panel active" id="tab-eniac">
+            <EniacMachine />
           </div>
         )}
 
         {activeTab === 'univac' && (
-          <div className="lab-tab-panel coming-soon-panel" id="tab-univac">
-            <h3>UNIVAC I</h3>
-            <div className="placeholder-image">Historical image placeholder</div>
-            <p>UNIVAC I was the first commercially produced computer in the United States, bringing computing into business and government use.</p>
-            <div className="coming-soon-note">Interactive exhibit coming in a future update.</div>
+          <div className="lab-tab-panel active" id="tab-univac">
+            <UnivacMachine />
           </div>
         )}
       </div>

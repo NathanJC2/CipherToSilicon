@@ -29,7 +29,6 @@ const PanoramaViewer: React.FC<PanoramaViewerProps> = ({ panorama, hotspots, onH
       navbar: ['zoom', 'fullscreen'],
       mousewheel: true,
       touchmoveTwoFingers: true,
-      defaultLongPressDelay: 300,
       caption: roomName,
       loadingTxt: 'Loading panorama…',
       plugins: []
