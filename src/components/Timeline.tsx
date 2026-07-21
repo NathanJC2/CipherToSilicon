@@ -155,7 +155,10 @@ const Timeline: React.FC = () => {
   const [feedback, setFeedback] = useState<{ text: string; tone: 'success' | 'info' | 'error' }>({ text: 'Begin with the Classical Era and answer its checkpoint to unlock the next era.', tone: 'info' });
 
   const getAssetUrl = (filename: string) => {
-  return `/${filename}`;
+  const base = import.meta.env.BASE_URL;
+  const normalizedBase = base.endsWith('/') ? base : `${base}/`;
+  const normalizedFilename = filename.startsWith('/') ? filename.slice(1) : filename;
+  return `${normalizedBase}${normalizedFilename}`;
 };
 
   const total = timelineData.length;
