@@ -3,6 +3,14 @@
 
 *Note: This is a living document. All features and design choices are subject to change until the final submission.*
 
+## Disclosure on use of AI
+In the development of this project Artificial Intelligence (AI) tools were utilized to assist with tasks such as,
+brainstorming conceptual layouts, formatting texts, and for refining the document structure.
+   **AI Tools used:**
+   
+---
+
+# Project Proposal
 ## Project Overview
 Throughout history, people have looked for ways to secure sensitive information. Early methods of encryption began with classical ciphers such as the Caesar cipher. However, as communication became more important, encryption methods also became more advanced. The manual codebreaking methods of the past became time-consuming and inefficient as these systems grew more complicated. 
 
@@ -49,7 +57,7 @@ Aiming for a vintage, wartime aesthetic using a monochrome/muted grayscale palet
 *   **Timeline Pop-ups:** Clean modal cards displaying historical images, diagrams, and notable figures.
 *   **Codebreaking UI:** Clues are styled as classified manila dossiers, while input fields use terminal-style text boxes.
 *   **Difficulty Scaling:** Subtle visual static is added to the background as cryptographic concepts increase in difficulty.
-
+  
 ---
 
 ## Group Members (Group 9)
