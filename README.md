@@ -81,3 +81,4 @@ Aiming for a vintage, wartime aesthetic using a monochrome/muted grayscale palet
 
 ## References & Inspiration
 *   [Enigma Machine Emulator](https://www.101computing.net/enigma-machine-emulator/)
+*   [National Museum of Fine Arts (Panoramic Display Inspiration)](https://nmfa.nationalmuseum.gov.ph/?fbclid=IwY2xjawTMa2BleHRuA2FlbQIxMQBzcnRjBmFwcF9pZAEwAAEeoA4T0boNXsiYvGKsnJP15aat02wvEZxTCl-_2vttHcj7zTLY24QOa8RP3Es_aem_1vKiR7KrYdZSnsPZrIhaLg)
