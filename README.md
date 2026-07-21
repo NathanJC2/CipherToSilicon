@@ -3,6 +3,9 @@
 
 *Note: This is a living document. All features and design choices are subject to change until the final submission.*
 
+## Technical and Creative Discussions
+*   During the development of Cipher To Silicon, we focused on making the project both informative and interactive. Our main idea was to present the history of cryptography and computing as an interactive virtual museum instead of a website with only text and images. We created the virtual exhibit, historical timeline, interactive exhibits, cipher simulators, and codebreaking challenge to make the project more engaging. We also added encryption and decryption features for the Caesar Cipher and Vigenère Cipher and showed the results instantly to help users understand how they work. The name Cipher To Silicon represents the connection between the development of cryptography and the growth of computing technology, which became the main theme of our project. Throughout development, we also fixed layout, formatting, and responsive design issues to improve the overall user experience.
+
 ## Aha Moments
 *   While developing the project, we realized that interactive learning works much better for this topic than just presenting information as text. Cryptography can be difficult to understand by only reading about it, so giving users the chance to enter a message, change the cipher settings, and immediately see the encrypted output makes the concepts much easier to understand. We also realized that the history of cryptography is closely connected to the history of computing. At first, we thought the project would mainly focus on the development of encryption, but as we worked on the exhibits, we saw how the increasing complexity of encryption led to the need for faster and more powerful computers.
 
