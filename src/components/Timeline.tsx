@@ -20,88 +20,93 @@ type EraDefinition = {
   checkpointAnswer: string;
 };
 
+const getAssetUrl = (path: string) => {
+  const normalizedPath = path.replace(/^\/+/, '');
+  return `${import.meta.env.BASE_URL}${normalizedPath}`;
+};
+
 const timelineData: TimelineEvent[] = [
   {
     title: 'Caesar Cipher (c. 50 BCE)',
     body: 'The Caesar cipher is one of the earliest known substitution systems. By shifting letters by a fixed amount, it introduces a repeatable encryption rule. This idea, a rule-based transformation of symbols, is a conceptual ancestor of later algorithmic thinking in computing.',
-    image: '/caesar-cipher.jpg',
+    image: getAssetUrl('caesar-cipher.jpg'),
     imageAlt: 'Roman inscription and shifted alphabet concept diagram',
     caption: 'Suggested image: Roman era cipher wheel or Caesar shift alphabet chart.'
   },
   {
     title: 'Al-Kindi And Frequency Analysis (c. 850)',
     body: 'Al-Kindi documented frequency analysis, using statistical patterns in language to break substitution ciphers. This transformed codebreaking from guesswork into methodical analysis, an important step toward data-oriented and computational problem solving.',
-    image: '/al-kindi-frequency.jpg',
+    image: getAssetUrl('al-kindi-frequency.jpg'),
     imageAlt: 'Arabic manuscript with letter frequency notes',
     caption: 'Suggested image: historical manuscript or reconstructed frequency table.'
   },
   {
     title: 'Polyalphabetic Cipher Concepts (1467)',
     body: 'Leone Alberti described rotating alphabets, an idea that increased cipher complexity compared with single-shift methods. This shift from simple substitution to changing state is conceptually similar to stateful transformations used in modern computation.',
-    image: '/alberti-disk.jpg',
+    image: getAssetUrl('alberti-disk.jpg'),
     imageAlt: 'Alberti cipher disk illustration',
     caption: 'Suggested image: Alberti disk or rotating alphabet diagram.'
   },
   {
     title: 'Vigenere Cipher Popularized (1586)',
     body: 'The Vigenere method became a benchmark of stronger manual encryption by changing shifts through a keyword. It remained influential for centuries and pushed analysts to develop deeper pattern-search strategies.',
-    image: '/vigenere-table.jpg',
+    image: getAssetUrl('vigenere-table.jpg'),
     imageAlt: 'Tabula recta for Vigenere encryption',
     caption: 'Suggested image: tabula recta and keyword-based encryption example.'
   },
   {
     title: 'Babbage Breaks Vigenere (1854)',
     body: 'Charles Babbage applied systematic analysis to break the Vigenere cipher long before it became widely known. His approach reinforced the relationship between mathematical methods, data analysis, and proto-computational problem solving.',
-    image: '/babbage-notes.jpg',
+    image: getAssetUrl('babbage-notes.jpg'),
     imageAlt: 'Babbage notebooks and analytical diagrams',
     caption: 'Suggested image: Babbage notes or historical cryptanalysis worksheet.'
   },
   {
     title: 'Rotor Machine Era (1917-1920s)',
     body: 'Rotor machines such as Hebern designs and Enigma mechanized complex substitution. Each keypress changed the internal state, creating large keyspaces and operational complexity that demanded more systematic and eventually mechanized codebreaking.',
-    image: '/rotor-machine.jpg',
+    image: getAssetUrl('rotor-machine.jpg'),
     imageAlt: 'Electromechanical rotor cipher machine',
     caption: 'Suggested image: Hebern/Enigma machine close-up with rotors visible.'
   },
   {
     title: 'Bletchley Park And Early Machines (1940s)',
     body: 'Codebreakers at Bletchley Park used electromechanical Bombe systems and the electronic Colossus machine to automate parts of cryptanalysis. Their work demonstrated that information problems could be attacked with programmable, machine-driven logic.',
-    image: '/bletchley-colossus.jpg',
+    image: getAssetUrl('bletchley-colossus.jpg'),
     imageAlt: 'Bletchley Park room with Colossus/Bombe equipment',
     caption: 'Suggested image: Bletchley Park operations or Colossus reconstruction.'
   },
   {
     title: 'Information Theory (1948)',
     body: 'Claude Shannon formalized information theory and analyzed secrecy systems mathematically. His work connected communication, probability, and computation, becoming foundational for computer science, digital communication, and modern cryptography.',
-    image: '/shannon-diagram.jpg',
+    image: getAssetUrl('shannon-diagram.jpg'),
     imageAlt: 'Information source-channel-receiver model diagram',
     caption: 'Suggested image: Shannon communication model or entropy visualization.'
   },
   {
     title: 'Public-Key Breakthrough (1976-1977)',
     body: 'Diffie-Hellman introduced practical key exchange, and RSA provided scalable public-key encryption and signatures. These breakthroughs enabled secure communication between computers that had never shared a secret beforehand.',
-    image: '/public-key.jpg',
+    image: getAssetUrl('public-key.jpg'),
     imageAlt: 'Public-key encryption concept with key pairs',
     caption: 'Suggested image: public-key exchange flow diagram.'
   },
   {
     title: 'PGP And Personal Encryption (1991)',
     body: 'Pretty Good Privacy (PGP) brought strong cryptography to personal computers and email, making end-user security practical. It marked a social and technical shift where cryptography moved from state and military contexts into everyday civilian computing.',
-    image: '/pgp-email.jpg',
+    image: getAssetUrl('pgp-email.jpg'),
     imageAlt: 'Encrypted email interface illustration',
     caption: 'Suggested image: PGP keyring screenshot or encrypted email demo.'
   },
   {
     title: 'SSL/TLS Secures The Web (1994-2001)',
     body: 'SSL and later TLS standardized encrypted web sessions, enabling secure shopping, banking, and authentication online. The padlock model became a familiar symbol of trust for mainstream internet users.',
-    image: '/ssl-tls-web.jpg',
+    image: getAssetUrl('ssl-tls-web.jpg'),
     imageAlt: 'Browser lock icon and HTTPS exchange diagram',
     caption: 'Suggested image: HTTPS handshake diagram or early browser security indicator.'
   },
   {
     title: 'Internet Security Age (1990s-Present)',
     body: 'From SSL/TLS to encrypted messaging, cryptography became a core layer of internet computing. Secure protocols now protect software updates, banking, cloud services, identity systems, and private communication across global networks.',
-    image: '/internet-security.jpg',
+    image: getAssetUrl('internet-security.jpg'),
     imageAlt: 'Modern network security dashboard and encrypted traffic',
     caption: 'Suggested image: modern network map with encrypted channels.'
   }

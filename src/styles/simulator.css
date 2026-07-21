@@ -541,6 +541,60 @@
     flex: 1;
 }
 
+.finale-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem 1.1rem;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #eef2ff 0%, #f8fafc 100%);
+    border: 1px solid #dbeafe;
+}
+
+.finale-hero__copy {
+    flex: 1;
+}
+
+.finale-hero__copy h4 {
+    margin: 0 0 0.4rem;
+    color: #1e3a8a;
+}
+
+.finale-hero__copy p {
+    margin: 0;
+    line-height: 1.6;
+    color: #334155;
+}
+
+.finale-hero__stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.finale-stat {
+    min-width: 120px;
+    padding: 0.7rem 0.8rem;
+    border-radius: 10px;
+    background: #ffffff;
+    border: 1px solid #dbeafe;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    color: #475569;
+}
+
+.finale-stat span {
+    font-size: 0.74rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+
+.finale-stat strong {
+    color: #1e3a8a;
+}
+
 .finale-stack {
     display: flex;
     flex-wrap: wrap;
@@ -552,11 +606,92 @@
     border-radius: 999px;
     background: #e2e8f0;
     color: #334155;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: transform 180ms ease, background 180ms ease, color 180ms ease, box-shadow 180ms ease;
+}
+
+.finale-step:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(15, 23, 42, 0.08);
 }
 
 .finale-step.active {
     background: #1d4ed8;
     color: white;
+}
+
+.finale-detail {
+    display: grid;
+    grid-template-columns: 1.4fr 0.9fr;
+    gap: 0.9rem;
+}
+
+.finale-detail__main,
+.finale-detail__side {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+.finale-detail__eyebrow {
+    margin: 0 0 0.35rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #64748b;
+}
+
+.finale-detail__main h4,
+.finale-detail__side h5 {
+    margin: 0 0 0.4rem;
+    color: #0f172a;
+}
+
+.finale-detail__main p,
+.finale-detail__side p {
+    margin: 0 0 0.6rem;
+    line-height: 1.6;
+    color: #334155;
+}
+
+.finale-detail__pill-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+}
+
+.finale-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 0.6rem;
+    border-radius: 999px;
+    background: #dbeafe;
+    color: #1e3a8a;
+    font-size: 0.86rem;
+}
+
+@media (max-width: 900px) {
+    .finale-hero,
+    .finale-detail {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 640px) {
+    .finale-hero {
+        padding: 0.9rem;
+    }
+
+    .finale-hero__stats {
+        width: 100%;
+    }
+
+    .finale-stat {
+        flex: 1 1 120px;
+    }
 }
 
 @keyframes glow {
