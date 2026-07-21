@@ -49,5 +49,5 @@
   /* Typography */
   --font-sans: 'Inter', sans-serif;
   --font-mono: 'Courier Prime', monospace;
-  --font-display: 'Special Elite', cursive;
+  --font-display: 'Cormorant Garamond', 'Times New Roman', serif;
 }

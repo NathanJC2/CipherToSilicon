@@ -18,20 +18,21 @@
 
 .difficulty-btn {
     padding: 0.8rem 1.5rem;
-    border: 2px solid #8E8E8E;
-    background-color: transparent;
-    color: #1A1A1A;
+    border: 2px solid #2b2b2b;
+    background-color: #111111;
+    color: #f5f5f5;
     border-radius: 4px;
     cursor: pointer;
     font-family: 'Courier Prime', monospace;
     font-weight: 600;
     transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(18, 18, 18, 0.06);
 }
 
 .difficulty-btn.active {
-    background-color: #1A1A1A;
+    background-color: #0d0d0d;
     color: #F5F5F5;
-    border-color: #1A1A1A;
+    border-color: #0d0d0d;
 }
 
 .difficulty-btn:hover {
@@ -95,7 +96,7 @@
 }
 
 .dossier-title {
-    font-family: 'Special Elite', cursive;
+    font-family: 'Cormorant Garamond', 'Times New Roman', serif;
     font-size: 1.4rem;
     margin-bottom: 1rem;
     color: #1A1A1A;
@@ -226,7 +227,7 @@
 }
 
 .info-title {
-    font-family: 'Special Elite', cursive;
+    font-family: 'Cormorant Garamond', 'Times New Roman', serif;
     font-size: 1.1rem;
     color: #1A1A1A;
     margin-bottom: 0.5rem;

@@ -11,21 +11,23 @@
 }
 
 .museum-navigation .nav-btn {
-  background: transparent;
-  color: var(--text-primary, #1A1A1A);
-  border: 2px solid rgba(26, 26, 26, 0.9);
+  background: #111111;
+  color: #f5f5f5;
+  border: 2px solid rgba(18, 18, 18, 0.95);
   padding: 0.6rem 1rem;
   border-radius: 6px;
   font-family: var(--font-mono, "Courier Prime"), monospace;
   font-weight: 600;
   cursor: pointer;
   transition: transform 180ms ease, background 180ms ease, color 180ms ease;
+  box-shadow: 0 2px 6px rgba(18, 18, 18, 0.06);
 }
 
 .museum-navigation .nav-btn:hover {
   transform: translateY(-2px);
-  background: rgba(26, 26, 26, 0.92);
-  color: #fff;
+  background: #171717;
+  color: #f5f5f5;
+  box-shadow: 0 8px 18px rgba(18, 18, 18, 0.18);
 }
 
 .museum-navigation .nav-btn:active {
@@ -33,9 +35,10 @@
 }
 
 .museum-navigation .nav-btn.active {
-  background: rgba(26, 26, 26, 0.92);
-  color: #fff;
-  border-color: rgba(26, 26, 26, 0.95);
+  background: #0d0d0d;
+  color: #f5f5f5;
+  border-color: #0d0d0d;
+  box-shadow: 0 8px 18px rgba(18, 18, 18, 0.2);
 }
 
 /* Focus styles for accessibility */

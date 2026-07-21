@@ -36,7 +36,7 @@
 }
 
 .era-header h3 {
-    font-family: 'Special Elite', cursive;
+    font-family: 'Cormorant Garamond', 'Times New Roman', serif;
     font-size: 1.3rem;
     margin-bottom: 0.4rem;
     color: #1A1A1A;
@@ -102,7 +102,7 @@
 }
 
 .checkpoint-title {
-    font-family: 'Special Elite', cursive;
+    font-family: 'Cormorant Garamond', 'Times New Roman', serif;
     font-size: 1.2rem;
     margin-bottom: 0.75rem;
     color: #1A1A1A;
@@ -287,7 +287,7 @@
 }
 
 .timeline-title {
-    font-family: 'Special Elite', cursive;
+    font-family: 'Cormorant Garamond', 'Times New Roman', serif;
     font-size: 1.2rem;
     color: #4A4A4A;
     margin-bottom: 0.5rem;
@@ -414,7 +414,7 @@
 .filter-btn {
     padding: 0.6rem 1.2rem;
     border: 2px solid #8E8E8E;
-    background-color: transparent;
+    background-color: #F8F8F4;
     color: #1A1A1A;
     border-radius: 4px;
     cursor: pointer;
@@ -423,6 +423,7 @@
     transition: all 0.3s ease;
     font-size: 0.9rem;
     letter-spacing: 0.4px;
+    box-shadow: 0 2px 6px rgba(18, 18, 18, 0.06);
 }
 
 .filter-btn.active {
@@ -453,22 +454,24 @@
 
 .lab-tab,
 .lab-subtab {
-    border: 2px solid #8E8E8E;
-    background-color: transparent;
-    color: #1A1A1A;
+    border: 2px solid #2b2b2b;
+    background-color: #111111;
+    color: #f5f5f5;
     font-family: 'Courier Prime', monospace;
     font-weight: 600;
     padding: 0.75rem 1.25rem;
     border-radius: 6px;
     cursor: pointer;
     transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(18, 18, 18, 0.06);
 }
 
 .lab-tab.active,
 .lab-subtab.active {
-    background-color: #1A1A1A;
+    background-color: #0d0d0d;
     color: #F5F5F5;
-    border-color: #1A1A1A;
+    border-color: #0d0d0d;
+    box-shadow: 0 6px 14px rgba(18, 18, 18, 0.18);
 }
 
 .coming-soon-label {
@@ -566,7 +569,7 @@
 
 .enigma-illustration-title {
     margin-bottom: 1rem;
-    font-family: 'Special Elite', cursive;
+    font-family: 'Cormorant Garamond', 'Times New Roman', serif;
     font-size: 1.1rem;
 }
 
