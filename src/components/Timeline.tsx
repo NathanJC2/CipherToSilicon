@@ -22,7 +22,8 @@ type EraDefinition = {
 
 const getAssetUrl = (path: string) => {
   const normalizedPath = path.replace(/^\/+/, '');
-  return `${import.meta.env.BASE_URL}${normalizedPath}`;
+  const base = import.meta.env.BASE_URL || '/';
+  return `${base}${normalizedPath}`;
 };
 
 const timelineData: TimelineEvent[] = [
