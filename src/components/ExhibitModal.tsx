@@ -131,12 +131,14 @@ const ExhibitModal: React.FC<ExhibitModalProps> = ({ hotspot, onClose }) => {
               </div>
             ) : (
               <div className="exhibit-modal__info">
-                <p style={{ marginBottom: 12 }}>
-                  Interactive simulation for this machine will be added in a future update.
+                <p className="exhibit-modal__info-lead">
+                  Welcome to the exhibit. This space introduces the story of cryptography, the people who shaped it, and the machines that turned secrecy into science.
                 </p>
-                <p style={{ color: '#666', fontSize: 13 }}>
-                  Historical summary and key specifications are shown on the left. Check back soon for an interactive exhibit.
-                </p>
+                <ul className="exhibit-modal__info-list">
+                  <li>Use the left panel to explore historic summaries, key dates, and machine background.</li>
+                  <li>Hotspot images and descriptions show the design and purpose of each featured device.</li>
+                  <li>Interactive simulations will arrive soon — for now, start by reading the inventors and breakthroughs behind the exhibit.</li>
+                </ul>
               </div>
             )}
           </main>

@@ -66,21 +66,22 @@
   top: calc(100% + 0.5rem);
   left: 50%;
   transform: translateX(-50%);
-  padding: 0.35rem 0.6rem;
+  padding: 0.36rem 0.65rem;
   border-radius: var(--radius-full);
-  background: var(--glass-bg-dark);
-  border: 1px solid var(--glass-border);
+  background: rgba(10, 10, 14, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   color: var(--text-primary);
   font-family: var(--font-mono);
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: none;
   white-space: nowrap;
   opacity: 0;
   pointer-events: none;
-  transition: opacity var(--transition-fast);
+  transition: opacity var(--transition-fast), transform 120ms ease;
   z-index: 100;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
 }
 
 .panorama-hotspot-wrapper:hover .panorama-hotspot__label {

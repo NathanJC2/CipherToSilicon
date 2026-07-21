@@ -53,8 +53,8 @@ export const rooms: RoomConfig[] = [
         type: 'info',
         x: 70,
         y: 34,
-        title: 'Welcome Exhibit',
-        description: 'A short introduction to the museum\'s journey through cryptography.',
+        title: 'Welcome to the Exhibit',
+        description: 'Step into the story of cryptography and the machines that changed history.',
         image: assetPath('/caesar-cipher.jpg'),
         buttonLabel: 'Open Exhibit'
       }
