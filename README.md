@@ -11,7 +11,7 @@ brainstorming conceptual layouts, structuring the project structure and organiza
    * ChatGPT 5.6 - Used to help in brainstorming ideas, structuring the project layout, and organizing the development roadmap.
    * Google Gemini 3.1 Pro - Used to assist in brainstorming interactive features, refining UI/UX concepts, and formatting project documentation.
 
-*All AI-generated outputs were thoroughly reviewed, edited, and validated by the project members to ensure historical accuracy, alignment with our project goals, and originality of the final product. The core concepts, research, and technical implementation remain the original work of Group 9.*
+*All AI-generated outputs were thoroughly reviewed, edited, and validated by the project members to ensure historical accuracy, alignment with our project goals, and originality of the final product. The core concepts, research, and technical implementation remain the original work of the group.*
    
 ---
 
