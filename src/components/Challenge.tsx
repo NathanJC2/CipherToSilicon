@@ -100,7 +100,7 @@ const Challenge: React.FC = () => {
             <div className="dossier-title">CASE #6</div>
             <div className="clue-text"><strong>Clue:</strong> Reverse-text cipher.</div>
             <div className="clue-text"><strong>How it works:</strong> Read the encrypted word from right to left.</div>
-            <div className="encrypted-message">SUSSOLC</div>
+            <div className="encrypted-message">SUSSOLOC</div>
             <input type="text" className="answer-input" id="answer6" placeholder="Enter decrypted message..." value={answers[6]} onChange={(e) => setAnswers(a => ({ ...a, 6: e.target.value }))} />
             <button className="submit-answer" onClick={() => checkAnswer(6)}>Submit Answer</button>
             <div className={`result-message ${results[6]?.ok ? 'correct' : results[6]?.ok === false ? 'incorrect' : ''}`} id="result6">{results[6]?.message}</div>
