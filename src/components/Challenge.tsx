@@ -7,26 +7,17 @@ type CaseData = {
 
 const initialData: Record<number, CaseData> = {
   1: { answer: 'HELLO WORLD', hint: 'Simple substitution cipher. Each letter shifts by 3 positions.' },
-  2: { answer: 'HELLO WORLD', hint: 'Caesar cipher with shift of 5.' },
-  3: { answer: 'ENIGMA ROCKS', hint: 'ROT13 cipher - rotate each letter by 13 positions.' },
-  4: { answer: 'BLETCHLEY PARK', hint: 'Atbash cipher - A=Z, B=Y, etc.' },
-  5: { answer: 'ALAN TURING', hint: 'A1Z26 number cipher where A=1, B=2, ..., Z=26.' },
-  6: { answer: 'CRYPTOGRAPHY', hint: 'Reverse-text cipher. Read from right to left.' }
+  2: { answer: 'HELLO THERE', hint: 'Caesar cipher with shift of 5.' },
+  3: { answer: 'THE QUICK BROWN FOX', hint: 'ROT13 cipher - rotate each letter by 13 positions.' },
+  4: { answer: 'SECRET CODE', hint: 'Atbash cipher - A=Z, B=Y, etc.' },
+  5: { answer: 'CODE BREAKER', hint: 'A1Z26 number cipher where A=1, B=2, ..., Z=26.' },
+  6: { answer: 'COLOSSUS', hint: 'Reverse-text cipher. Read the encrypted word from right to left.' }
 };
 
-const maxAttempts = { easy: 5, medium: 3, hard: 2 };
-
 const Challenge: React.FC = () => {
-  const [difficulty, setDifficulty] = useState<'easy' | 'medium' | 'hard'>('easy');
   const [attempts, setAttempts] = useState<Record<number, number>>({ 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0 });
   const [answers, setAnswers] = useState<Record<number, string>>({ 1: '', 2: '', 3: '', 4: '', 5: '', 6: '' });
   const [results, setResults] = useState<Record<number, { message: string; ok: boolean | null }>>({});
-
-  const setDifficultyHandler = (d: 'easy' | 'medium' | 'hard') => {
-    setDifficulty(d);
-    setAttempts({ 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0 });
-    setResults({});
-  };
 
   const checkAnswer = (caseNum: number) => {
     const user = (answers[caseNum] || '').toUpperCase().trim();
@@ -34,15 +25,10 @@ const Challenge: React.FC = () => {
     const nextAttempts = { ...attempts, [caseNum]: attempts[caseNum] + 1 };
     setAttempts(nextAttempts);
 
-    const attemptsLeft = maxAttempts[difficulty] - nextAttempts[caseNum];
     if (user === correct) {
       setResults(prev => ({ ...prev, [caseNum]: { message: '✓ CORRECT! You successfully decrypted the message.', ok: true } }));
     } else {
-      if (attemptsLeft > 0) {
-        setResults(prev => ({ ...prev, [caseNum]: { message: `✗ INCORRECT. ${attemptsLeft} attempt${attemptsLeft > 1 ? 's' : ''} remaining.`, ok: false } }));
-      } else {
-        setResults(prev => ({ ...prev, [caseNum]: { message: `✗ FAILED. The answer was: ${correct}`, ok: false } }));
-      }
+      setResults(prev => ({ ...prev, [caseNum]: { message: `✗ INCORRECT. Try again. (${nextAttempts[caseNum]} attempt${nextAttempts[caseNum] > 1 ? 's' : ''})`, ok: false } }));
     }
   };
 
@@ -55,14 +41,8 @@ const Challenge: React.FC = () => {
         <div className="challenge-info">
           <div className="info-title">Challenge Instructions</div>
           <div className="info-text">
-            Select a difficulty level, decode each message, and connect each method to its historical era. You have limited attempts per case, and the harder modes reduce trial-and-error room.
+            Decode each message and connect each method to its historical era. Enter your answer below each case and submit to check if it's correct.
           </div>
-        </div>
-
-        <div className="difficulty-selector">
-          <button className={`difficulty-btn ${difficulty === 'easy' ? 'active' : ''}`} onClick={() => setDifficultyHandler('easy')}>Easy</button>
-          <button className={`difficulty-btn ${difficulty === 'medium' ? 'active' : ''}`} onClick={() => setDifficultyHandler('medium')}>Medium</button>
-          <button className={`difficulty-btn ${difficulty === 'hard' ? 'active' : ''}`} onClick={() => setDifficultyHandler('hard')}>Hard</button>
         </div>
 
         <div className="challenge-board" id="challengeBoard">
@@ -80,7 +60,7 @@ const Challenge: React.FC = () => {
             <div className="dossier-title">CASE #2</div>
             <div className="clue-text"><strong>Clue:</strong> Caesar cipher with shift of 5.</div>
             <div className="clue-text"><strong>How it works:</strong> Move each encrypted letter 5 steps backward in the alphabet.</div>
-            <div className="encrypted-message">MJQQT BTWQI</div>
+            <div className="encrypted-message">MJQQT YMJWJ</div>
             <input type="text" className="answer-input" id="answer2" placeholder="Enter decrypted message..." value={answers[2]} onChange={(e) => setAnswers(a => ({ ...a, 2: e.target.value }))} />
             <button className="submit-answer" onClick={() => checkAnswer(2)}>Submit Answer</button>
             <div className={`result-message ${results[2]?.ok ? 'correct' : results[2]?.ok === false ? 'incorrect' : ''}`} id="result2">{results[2]?.message}</div>
@@ -90,7 +70,7 @@ const Challenge: React.FC = () => {
             <div className="dossier-title">CASE #3</div>
             <div className="clue-text"><strong>Clue:</strong> ROT13 cipher - rotate each letter by 13 positions.</div>
             <div className="clue-text"><strong>How it works:</strong> ROT13 swaps letters halfway across the alphabet (A↔N, B↔O).</div>
-            <div className="encrypted-message">RAVTZN EBPXF</div>
+            <div className="encrypted-message">GUR DHVPX OEBJA SBK</div>
             <input type="text" className="answer-input" id="answer3" placeholder="Enter decrypted message..." value={answers[3]} onChange={(e) => setAnswers(a => ({ ...a, 3: e.target.value }))} />
             <button className="submit-answer" onClick={() => checkAnswer(3)}>Submit Answer</button>
             <div className={`result-message ${results[3]?.ok ? 'correct' : results[3]?.ok === false ? 'incorrect' : ''}`} id="result3">{results[3]?.message}</div>
@@ -100,7 +80,7 @@ const Challenge: React.FC = () => {
             <div className="dossier-title">CASE #4</div>
             <div className="clue-text"><strong>Clue:</strong> Atbash cipher - A=Z, B=Y, C=X, etc. (Reverse alphabet)</div>
             <div className="clue-text"><strong>How it works:</strong> Replace each letter with its opposite partner in the alphabet.</div>
-            <div className="encrypted-message">YOVGXSOVB KZIP</div>
+            <div className="encrypted-message">HVXIVG XLWV</div>
             <input type="text" className="answer-input" id="answer4" placeholder="Enter decrypted message..." value={answers[4]} onChange={(e) => setAnswers(a => ({ ...a, 4: e.target.value }))} />
             <button className="submit-answer" onClick={() => checkAnswer(4)}>Submit Answer</button>
             <div className={`result-message ${results[4]?.ok ? 'correct' : results[4]?.ok === false ? 'incorrect' : ''}`} id="result4">{results[4]?.message}</div>
@@ -110,7 +90,7 @@ const Challenge: React.FC = () => {
             <div className="dossier-title">CASE #5</div>
             <div className="clue-text"><strong>Clue:</strong> A1Z26 number cipher where A=1, B=2, ..., Z=26.</div>
             <div className="clue-text"><strong>How it works:</strong> Convert each number back into its matching letter.</div>
-            <div className="encrypted-message">1-12-1-14 20-21-18-9-14-7</div>
+            <div className="encrypted-message">3-15-4-5 2-18-5-1-11-5-18</div>
             <input type="text" className="answer-input" id="answer5" placeholder="Enter decrypted message..." value={answers[5]} onChange={(e) => setAnswers(a => ({ ...a, 5: e.target.value }))} />
             <button className="submit-answer" onClick={() => checkAnswer(5)}>Submit Answer</button>
             <div className={`result-message ${results[5]?.ok ? 'correct' : results[5]?.ok === false ? 'incorrect' : ''}`} id="result5">{results[5]?.message}</div>
@@ -120,7 +100,7 @@ const Challenge: React.FC = () => {
             <div className="dossier-title">CASE #6</div>
             <div className="clue-text"><strong>Clue:</strong> Reverse-text cipher.</div>
             <div className="clue-text"><strong>How it works:</strong> Read the encrypted word from right to left.</div>
-            <div className="encrypted-message">YHPARGOTPYRC</div>
+            <div className="encrypted-message">SUSSOLC</div>
             <input type="text" className="answer-input" id="answer6" placeholder="Enter decrypted message..." value={answers[6]} onChange={(e) => setAnswers(a => ({ ...a, 6: e.target.value }))} />
             <button className="submit-answer" onClick={() => checkAnswer(6)}>Submit Answer</button>
             <div className={`result-message ${results[6]?.ok ? 'correct' : results[6]?.ok === false ? 'incorrect' : ''}`} id="result6">{results[6]?.message}</div>
