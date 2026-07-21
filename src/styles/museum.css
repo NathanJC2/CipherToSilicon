@@ -25,6 +25,11 @@
   color: #4a4a4a;
 }
 
+.panel-shell__content .museum-map-page .section-title,
+.panel-shell__content .museum-map-page .section-description {
+  color: #1a1a1a !important;
+}
+
 .museum-map-shell {
   display: flex;
   justify-content: flex-start;
