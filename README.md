@@ -1,4 +1,4 @@
-# Breaking Enigma: Secrets, War, and the Birth of Computing
+# Cipher To Silicon: The History of Computing through cryptography
 > **Project Theme:** Historical Computing | **Group 9**
 
 *Note: This is a living document. All features and design choices are subject to change until the final submission.*
