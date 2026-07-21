@@ -155,9 +155,8 @@ const Timeline: React.FC = () => {
   const [feedback, setFeedback] = useState<{ text: string; tone: 'success' | 'info' | 'error' }>({ text: 'Begin with the Classical Era and answer its checkpoint to unlock the next era.', tone: 'info' });
 
   const getAssetUrl = (filename: string) => {
-    const base = import.meta.env.BASE_URL || '/';
-    return `${base}${filename}`;
-  };
+  return `/${filename}`;
+};
 
   const total = timelineData.length;
   const currentEra = eras.find((era) => era.id === activeEra) ?? eras[0];
