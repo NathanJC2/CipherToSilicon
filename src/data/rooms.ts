@@ -37,7 +37,7 @@ export const rooms: RoomConfig[] = [
   {
     id: 'lobby',
     name: 'Entrance Lobby',
-    panorama: assetPath('/rooms/panorama_placeholder.jpg'),
+    panorama: assetPath('/rooms/panorama.jpg'),
     hotspots: [
       {
         id: 'to-classical',
@@ -63,7 +63,7 @@ export const rooms: RoomConfig[] = [
   {
     id: 'classical',
     name: 'Classical Ciphers',
-    panorama: assetPath('/rooms/panorama_placeholder.jpg'),
+    panorama: assetPath('/rooms/panorama.jpg'),
     hotspots: [
       {
         id: 'caesar-hotspot',
@@ -101,7 +101,7 @@ export const rooms: RoomConfig[] = [
   {
     id: 'timeline',
     name: 'Timeline of Cryptography',
-    panorama: assetPath('/rooms/panorama_placeholder.jpg'),
+    panorama: assetPath('/rooms/panorama.jpg'),
     hotspots: [
       {
         id: 'to-enigma',
@@ -128,7 +128,7 @@ export const rooms: RoomConfig[] = [
   {
     id: 'enigma',
     name: 'Enigma Machine Gallery',
-    panorama: assetPath('/rooms/panorama_placeholder.jpg'),
+    panorama: assetPath('/rooms/panorama.jpg'),
     hotspots: [
       {
         id: 'enigma-hotspot',
@@ -155,7 +155,7 @@ export const rooms: RoomConfig[] = [
   {
     id: 'rotor',
     name: 'Rotor Machines Gallery',
-    panorama: assetPath('/rooms/panorama_placeholder.jpg'),
+    panorama: assetPath('/rooms/panorama.jpg'),
     hotspots: [
       {
         id: 'rotor-info',
@@ -182,7 +182,7 @@ export const rooms: RoomConfig[] = [
   {
     id: 'modern',
     name: 'Modern Cryptography',
-    panorama: assetPath('/rooms/panorama_placeholder.jpg'),
+    panorama: assetPath('/rooms/panorama.jpg'),
     hotspots: [
       {
         id: 'modern-info',
@@ -211,7 +211,7 @@ export const rooms: RoomConfig[] = [
   {
     id: 'bombe',
     name: 'Bombe Gallery',
-    panorama: assetPath('/rooms/panorama_placeholder.jpg'),
+    panorama: assetPath('/rooms/panorama.jpg'),
     hotspots: [
       {
         id: 'bombe-info',
@@ -247,7 +247,7 @@ export const rooms: RoomConfig[] = [
   {
     id: 'colossus',
     name: 'Colossus Gallery',
-    panorama: assetPath('/rooms/panorama_placeholder.jpg'),
+    panorama: assetPath('/rooms/panorama.jpg'),
     hotspots: [
       {
         id: 'colossus-info',
@@ -283,7 +283,7 @@ export const rooms: RoomConfig[] = [
   {
     id: 'mark1',
     name: 'Harvard Mark I Gallery',
-    panorama: assetPath('/rooms/panorama_placeholder.jpg'),
+    panorama: assetPath('/rooms/panorama.jpg'),
     hotspots: [
       {
         id: 'mark1-info',
@@ -319,7 +319,7 @@ export const rooms: RoomConfig[] = [
   {
     id: 'eniac',
     name: 'ENIAC Gallery',
-    panorama: assetPath('/rooms/panorama_placeholder.jpg'),
+    panorama: assetPath('/rooms/panorama.jpg'),
     hotspots: [
       {
         id: 'eniac-info',
@@ -355,7 +355,7 @@ export const rooms: RoomConfig[] = [
   {
     id: 'univac',
     name: 'UNIVAC I Gallery',
-    panorama: assetPath('/rooms/panorama_placeholder.jpg'),
+    panorama: assetPath('/rooms/panorama.jpg'),
     hotspots: [
       {
         id: 'univac-info',
