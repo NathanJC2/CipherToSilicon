@@ -122,6 +122,17 @@ export const rooms: RoomConfig[] = [
         image: assetPath('/vigenere-table.jpg'),
         buttonLabel: 'Open Timeline',
         exhibitKey: 'timeline'
+      },
+      {
+        id: 'evolution-info',
+        type: 'info',
+        x: 68,
+        y: 30,
+        title: 'Computing Evolution Timeline',
+        description: 'See how each cryptographic breakthrough influenced the rise of computing.',
+        image: assetPath('/bletchley-colossus.jpg'),
+        buttonLabel: 'Open Evolution Timeline',
+        exhibitKey: 'evolution'
       }
     ]
   },
@@ -203,6 +214,15 @@ export const rooms: RoomConfig[] = [
         target: 'bombe',
         title: 'Door to Bombe Gallery',
         buttonLabel: 'Enter Bombe Gallery'
+      },
+      {
+        id: 'to-computing-concepts',
+        type: 'navigation',
+        x: 20,
+        y: 58,
+        target: 'concepts',
+        title: 'Door to Computing Concepts Gallery',
+        buttonLabel: 'Enter Concepts Gallery'
       }
     ]
   },
@@ -378,6 +398,15 @@ export const rooms: RoomConfig[] = [
         buttonLabel: 'Back'
       },
       {
+        id: 'to-comparison',
+        type: 'navigation',
+        x: 60,
+        y: 58,
+        target: 'comparison',
+        title: 'Machine Comparison Center',
+        buttonLabel: 'Open Comparison Center'
+      },
+      {
         id: 'to-lobby',
         type: 'navigation',
         x: 92,
@@ -385,6 +414,105 @@ export const rooms: RoomConfig[] = [
         target: 'lobby',
         title: 'Exit to Lobby',
         buttonLabel: 'Exit to Lobby'
+      }
+    ]
+  },
+  {
+    id: 'concepts',
+    name: 'Computing Concepts Gallery',
+    panorama: assetPath('/rooms/panorama.jpg'),
+    hotspots: [
+      {
+        id: 'concepts-info',
+        type: 'info',
+        x: 50,
+        y: 34,
+        title: 'Computing Concepts Gallery',
+        description: 'A gallery of ideas that emerged as cryptography demanded faster and more systematic computation.',
+        image: assetPath('/rotor-machine.jpg'),
+        buttonLabel: 'Open Gallery',
+        exhibitKey: 'concepts'
+      },
+      {
+        id: 'to-comparison',
+        type: 'navigation',
+        x: 72,
+        y: 58,
+        target: 'comparison',
+        title: 'Machine Comparison Center',
+        buttonLabel: 'Open Comparison Center'
+      },
+      {
+        id: 'to-finale',
+        type: 'navigation',
+        x: 28,
+        y: 58,
+        target: 'finale',
+        title: 'From Cipher to Silicon',
+        buttonLabel: 'Enter Finale'
+      }
+    ]
+  },
+  {
+    id: 'comparison',
+    name: 'Machine Comparison Center',
+    panorama: assetPath('/rooms/panorama.jpg'),
+    hotspots: [
+      {
+        id: 'comparison-info',
+        type: 'info',
+        x: 50,
+        y: 34,
+        title: 'Machine Comparison Center',
+        description: 'See how each machine contributed to the evolution of computing.',
+        image: assetPath('/bletchley-colossus.jpg'),
+        buttonLabel: 'Open Comparator',
+        exhibitKey: 'comparison'
+      },
+      {
+        id: 'to-finale',
+        type: 'navigation',
+        x: 72,
+        y: 58,
+        target: 'finale',
+        title: 'From Cipher to Silicon',
+        buttonLabel: 'Enter Finale'
+      },
+      {
+        id: 'to-concepts',
+        type: 'navigation',
+        x: 28,
+        y: 58,
+        target: 'concepts',
+        title: 'Back to Concepts Gallery',
+        buttonLabel: 'Back'
+      }
+    ]
+  },
+  {
+    id: 'finale',
+    name: 'From Cipher to Silicon',
+    panorama: assetPath('/rooms/panorama.jpg'),
+    hotspots: [
+      {
+        id: 'finale-info',
+        type: 'info',
+        x: 50,
+        y: 34,
+        title: 'From Cipher to Silicon',
+        description: 'A concluding gallery connecting cryptography and modern computing.',
+        image: assetPath('/internet-security.jpg'),
+        buttonLabel: 'Open Finale',
+        exhibitKey: 'finale'
+      },
+      {
+        id: 'to-lobby',
+        type: 'navigation',
+        x: 72,
+        y: 58,
+        target: 'lobby',
+        title: 'Return to Entrance Lobby',
+        buttonLabel: 'Return Home'
       }
     ]
   }

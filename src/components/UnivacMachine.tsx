@@ -184,11 +184,30 @@ const UnivacMachine: React.FC = () => {
         <textarea value={records} className="rotor-input" rows={4} onChange={(e) => setRecords(e.target.value)} placeholder="Example: 10, 20, 30, 40" />
       </div>
 
+      <div className="museum-innovation-card">
+        <h4>Why this machine was needed</h4>
+        <p>Once governments and businesses needed to process increasingly large amounts of information, a machine was needed that could manage records, reports, and recurring calculations reliably and quickly.</p>
+      </div>
+
       <div className="simulator-metadata">
         <div><strong>Year:</strong> 1951</div>
         <div><strong>Developers:</strong> Remington Rand</div>
         <div><strong>Purpose:</strong> Commercial business and administrative data processing</div>
         <div><strong>Significance:</strong> Showed how computers could move from scientific work to everyday business tasks</div>
+      </div>
+
+      <div className="museum-innovation-card">
+        <h4>Computing innovation</h4>
+        <p>UNIVAC I helped bring computing into the commercial world. Its use of data processing, reporting, and stored records established ideas that later shaped databases, business software, and networked information systems.</p>
+        <ul>
+          <li><strong>Principle:</strong> Data processing for business and administration</li>
+          <li><strong>Legacy:</strong> Databases, reporting systems, and modern information infrastructure</li>
+        </ul>
+      </div>
+
+      <div className="museum-innovation-card">
+        <h4>Legacy</h4>
+        <p>UNIVAC helped move computing from special-purpose calculation into the routine work of government and business. That shift shaped the modern information economy and the software systems we depend on today.</p>
       </div>
     </div>
   );

@@ -31,6 +31,25 @@ const RoomViewerFullscreen: React.FC<RoomViewerFullscreenProps> = ({
     setActiveHotspot(null);
   }, [roomId]);
 
+  useEffect(() => {
+    const handleOpenExhibit = (event: Event) => {
+      const customEvent = event as CustomEvent<{ exhibitKey?: string; title?: string }>; 
+      const exhibitKey = customEvent.detail?.exhibitKey;
+      if (!exhibitKey) return;
+
+      setActiveHotspot({
+        id: `event-${exhibitKey}`,
+        type: 'info',
+        title: customEvent.detail?.title ?? exhibitKey,
+        description: `Open the ${customEvent.detail?.title ?? exhibitKey} experience.`,
+        exhibitKey,
+      });
+    };
+
+    window.addEventListener('museum-open-exhibit', handleOpenExhibit);
+    return () => window.removeEventListener('museum-open-exhibit', handleOpenExhibit);
+  }, []);
+
   const transitionToRoom = (newRoomId: string) => {
     setTransitioning(true);
     window.setTimeout(() => {

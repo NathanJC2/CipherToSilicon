@@ -177,11 +177,30 @@ const ColossusMachine: React.FC = () => {
         </div>
       </div>
 
+      <div className="museum-innovation-card">
+        <h4>Why this machine was needed</h4>
+        <p>Once the war shifted to machine-generated traffic and long encrypted streams, human analysis became too slow. Colossus was built to test many bit patterns electronically and identify plausible solutions quickly.</p>
+      </div>
+
       <div className="simulator-metadata">
         <div><strong>Year:</strong> 1943</div>
         <div><strong>Developers:</strong> Tommy Flowers and the Post Office Research Station</div>
         <div><strong>Purpose:</strong> Analyze Lorenz cipher traffic</div>
         <div><strong>Significance:</strong> One of the first programmable electronic digital computers</div>
+      </div>
+
+      <div className="museum-innovation-card">
+        <h4>Computing innovation</h4>
+        <p>Colossus showed that electronic circuits could process digital data at high speed. Its design made it possible to test many signal hypotheses quickly, which was a major step toward electronic computation.</p>
+        <ul>
+          <li><strong>Principle:</strong> Electronic digital logic and programmable control</li>
+          <li><strong>Legacy:</strong> Modern CPUs, digital signal processing, and electronic data analysis</li>
+        </ul>
+      </div>
+
+      <div className="museum-innovation-card">
+        <h4>Legacy</h4>
+        <p>Colossus helped prove that electronic circuits could handle information at scale. That idea became central to CPUs, servers, and the broader digital infrastructure of modern computing.</p>
       </div>
     </div>
   );
