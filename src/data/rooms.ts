@@ -21,11 +21,23 @@ export interface RoomConfig {
   hotspots: RoomHotspot[];
 }
 
+// Helper function to get the base URL from import.meta.env
+const getBaseUrl = () => import.meta.env.BASE_URL || '/';
+
+// Helper function to prepend base URL to asset paths
+const assetPath = (path: string): string => {
+  const base = getBaseUrl();
+  if (path.startsWith('/')) {
+    return base.endsWith('/') ? base.slice(0, -1) + path : base + path;
+  }
+  return path;
+};
+
 export const rooms: RoomConfig[] = [
   {
     id: 'lobby',
     name: 'Entrance Lobby',
-    panorama: '/rooms/panorama_placeholder.jpg',
+    panorama: assetPath('/rooms/panorama_placeholder.jpg'),
     hotspots: [
       {
         id: 'to-classical',
@@ -42,8 +54,8 @@ export const rooms: RoomConfig[] = [
         x: 70,
         y: 34,
         title: 'Welcome Exhibit',
-        description: 'A short introduction to the museum’s journey through cryptography.',
-        image: '/caesar-cipher.jpg',
+        description: 'A short introduction to the museum\'s journey through cryptography.',
+        image: assetPath('/caesar-cipher.jpg'),
         buttonLabel: 'Open Exhibit'
       }
     ]
@@ -51,7 +63,7 @@ export const rooms: RoomConfig[] = [
   {
     id: 'classical',
     name: 'Classical Ciphers',
-    panorama: '/rooms/panorama_placeholder.jpg',
+    panorama: assetPath('/rooms/panorama_placeholder.jpg'),
     hotspots: [
       {
         id: 'caesar-hotspot',
@@ -60,7 +72,7 @@ export const rooms: RoomConfig[] = [
         y: 28,
         title: 'Caesar Cipher',
         description: 'Try the Caesar cipher simulator.',
-        image: '/caesar-cipher.jpg',
+        image: assetPath('/caesar-cipher.jpg'),
         buttonLabel: 'Open Simulator',
         exhibitKey: 'caesar'
       },
@@ -71,7 +83,7 @@ export const rooms: RoomConfig[] = [
         y: 34,
         title: 'Vigenère Cipher',
         description: 'Try the Vigenère cipher simulator.',
-        image: '/vigenere-table.jpg',
+        image: assetPath('/vigenere-table.jpg'),
         buttonLabel: 'Open Simulator',
         exhibitKey: 'vigenere'
       },
@@ -89,7 +101,7 @@ export const rooms: RoomConfig[] = [
   {
     id: 'timeline',
     name: 'Timeline of Cryptography',
-    panorama: '/rooms/panorama_placeholder.jpg',
+    panorama: assetPath('/rooms/panorama_placeholder.jpg'),
     hotspots: [
       {
         id: 'to-enigma',
@@ -107,7 +119,7 @@ export const rooms: RoomConfig[] = [
         y: 30,
         title: 'Historical Timeline',
         description: 'Follow the development of cryptography from ancient methods to modern systems.',
-        image: '/vigenere-table.jpg',
+        image: assetPath('/vigenere-table.jpg'),
         buttonLabel: 'Open Timeline',
         exhibitKey: 'timeline'
       }
@@ -116,7 +128,7 @@ export const rooms: RoomConfig[] = [
   {
     id: 'enigma',
     name: 'Enigma Machine Gallery',
-    panorama: '/rooms/panorama_placeholder.jpg',
+    panorama: assetPath('/rooms/panorama_placeholder.jpg'),
     hotspots: [
       {
         id: 'enigma-hotspot',
@@ -125,7 +137,7 @@ export const rooms: RoomConfig[] = [
         y: 24,
         title: 'Enigma Machine',
         description: 'Interact with an Enigma simulator.',
-        image: '/rotor-machine.jpg',
+        image: assetPath('/rotor-machine.jpg'),
         buttonLabel: 'Open Simulator',
         exhibitKey: 'enigma'
       },
@@ -143,7 +155,7 @@ export const rooms: RoomConfig[] = [
   {
     id: 'rotor',
     name: 'Rotor Machines Gallery',
-    panorama: '/rooms/panorama_placeholder.jpg',
+    panorama: assetPath('/rooms/panorama_placeholder.jpg'),
     hotspots: [
       {
         id: 'rotor-info',
@@ -152,7 +164,7 @@ export const rooms: RoomConfig[] = [
         y: 28,
         title: 'Rotor Showcase',
         description: 'Discover how mechanical advances set the foundation for modern computing and secure communication.',
-        image: '/rotor-machine.jpg',
+        image: assetPath('/rotor-machine.jpg'),
         buttonLabel: 'Open Exhibit',
         exhibitKey: 'rotor' // could map to a rotor demo component
       },
@@ -170,7 +182,7 @@ export const rooms: RoomConfig[] = [
   {
     id: 'modern',
     name: 'Modern Cryptography',
-    panorama: '/rooms/panorama_placeholder.jpg',
+    panorama: assetPath('/rooms/panorama_placeholder.jpg'),
     hotspots: [
       {
         id: 'modern-info',
@@ -179,7 +191,7 @@ export const rooms: RoomConfig[] = [
         y: 30,
         title: 'Modern Cryptography',
         description: 'A final look at the algorithms and systems that secure the digital age.',
-        image: '/bletchley-colossus.jpg',
+        image: assetPath('/bletchley-colossus.jpg'),
         buttonLabel: 'Open Exhibit',
         exhibitKey: 'modern'
       },
@@ -199,7 +211,7 @@ export const rooms: RoomConfig[] = [
   {
     id: 'bombe',
     name: 'Bombe Gallery',
-    panorama: '/rooms/panorama_placeholder.jpg',
+    panorama: assetPath('/rooms/panorama_placeholder.jpg'),
     hotspots: [
       {
         id: 'bombe-info',
@@ -208,7 +220,7 @@ export const rooms: RoomConfig[] = [
         y: 36,
         title: 'Bombe',
         description: 'The Bombe helped Allied codebreakers test Enigma settings rapidly.',
-        image: '/bombe.jpg',
+        image: assetPath('/bletchley-colossus.jpg'),
         buttonLabel: 'Open Exhibit',
         exhibitKey: 'bombe'
       },
@@ -235,7 +247,7 @@ export const rooms: RoomConfig[] = [
   {
     id: 'colossus',
     name: 'Colossus Gallery',
-    panorama: '/rooms/panorama_placeholder.jpg',
+    panorama: assetPath('/rooms/panorama_placeholder.jpg'),
     hotspots: [
       {
         id: 'colossus-info',
@@ -244,7 +256,7 @@ export const rooms: RoomConfig[] = [
         y: 30,
         title: 'Colossus',
         description: 'Colossus automated parts of Lorenz cryptanalysis with electronic logic.',
-        image: '/colossus.jpg',
+        image: assetPath('/bletchley-colossus.jpg'),
         buttonLabel: 'Open Exhibit',
         exhibitKey: 'colossus'
       },
@@ -271,7 +283,7 @@ export const rooms: RoomConfig[] = [
   {
     id: 'mark1',
     name: 'Harvard Mark I Gallery',
-    panorama: '/rooms/panorama_placeholder.jpg',
+    panorama: assetPath('/rooms/panorama_placeholder.jpg'),
     hotspots: [
       {
         id: 'mark1-info',
@@ -280,7 +292,7 @@ export const rooms: RoomConfig[] = [
         y: 36,
         title: 'Harvard Mark I',
         description: 'The Harvard Mark I was an early electromechanical computer used for scientific calculations.',
-        image: '/mark1.jpg',
+        image: assetPath('/rotor-machine.jpg'),
         buttonLabel: 'Open Exhibit',
         exhibitKey: 'mark1'
       },
@@ -307,7 +319,7 @@ export const rooms: RoomConfig[] = [
   {
     id: 'eniac',
     name: 'ENIAC Gallery',
-    panorama: '/rooms/panorama_placeholder.jpg',
+    panorama: assetPath('/rooms/panorama_placeholder.jpg'),
     hotspots: [
       {
         id: 'eniac-info',
@@ -316,7 +328,7 @@ export const rooms: RoomConfig[] = [
         y: 34,
         title: 'ENIAC',
         description: 'ENIAC was one of the first electronic digital computers, built for ballistic and scientific calculations.',
-        image: '/eniac.jpg',
+        image: assetPath('/bletchley-colossus.jpg'),
         buttonLabel: 'Open Exhibit',
         exhibitKey: 'eniac'
       },
@@ -343,7 +355,7 @@ export const rooms: RoomConfig[] = [
   {
     id: 'univac',
     name: 'UNIVAC I Gallery',
-    panorama: '/rooms/panorama_placeholder.jpg',
+    panorama: assetPath('/rooms/panorama_placeholder.jpg'),
     hotspots: [
       {
         id: 'univac-info',
@@ -352,7 +364,7 @@ export const rooms: RoomConfig[] = [
         y: 36,
         title: 'UNIVAC I',
         description: 'UNIVAC I was the first commercially produced computer in the US and brought computing to business and government.',
-        image: '/univac.jpg',
+        image: assetPath('/bletchley-colossus.jpg'),
         buttonLabel: 'Open Exhibit',
         exhibitKey: 'univac'
       },
