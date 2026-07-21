@@ -197,11 +197,30 @@ const BombeMachine: React.FC = () => {
         </div>
       </div>
 
+      <div className="museum-innovation-card">
+        <h4>Why this machine was needed</h4>
+        <p>Enigma created trillions of possible settings, so humans could no longer test them one by one. The Bombe was created to automate the search for likely rotor arrangements and reduce the work of codebreakers.</p>
+      </div>
+
       <div className="simulator-metadata">
         <div><strong>Year:</strong> 1939</div>
         <div><strong>Developers:</strong> Alan Turing, Gordon Welchman, and Bletchley Park staff</div>
         <div><strong>Purpose:</strong> Rapidly test possible Enigma rotor settings</div>
         <div><strong>Significance:</strong> Helped turn cipher breaking from slow manual work into a machine-assisted search</div>
+      </div>
+
+      <div className="museum-innovation-card">
+        <h4>Computing innovation</h4>
+        <p>The Bombe introduced automated logical search. Instead of checking each rotor arrangement by hand, it used electrical circuits to eliminate impossible settings and keep the promising ones.</p>
+        <ul>
+          <li><strong>Principle:</strong> Logical deduction through machine-driven search</li>
+          <li><strong>Legacy:</strong> Early search algorithms and automated pattern matching</li>
+        </ul>
+      </div>
+
+      <div className="museum-innovation-card">
+        <h4>Legacy</h4>
+        <p>The Bombe helped establish the idea that a machine could model a huge search space and prune it with logic. That approach later influenced search algorithms, optimization, and cybersecurity practice.</p>
       </div>
     </div>
   );

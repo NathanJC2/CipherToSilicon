@@ -179,11 +179,30 @@ const Mark1Machine: React.FC = () => {
         <input type="text" value={calculation} className="rotor-input" onChange={(e) => setCalculation(e.target.value)} placeholder="Example: 45 * 72" />
       </div>
 
+      <div className="museum-innovation-card">
+        <h4>Why this machine was needed</h4>
+        <p>As calculations grew larger and more repetitive, routine arithmetic needed a machine that could follow steps automatically rather than relying on manual labor or hand-assembled gearwork.</p>
+      </div>
+
       <div className="simulator-metadata">
         <div><strong>Year:</strong> 1944</div>
         <div><strong>Developers:</strong> Howard Aiken and IBM</div>
         <div><strong>Purpose:</strong> Scientific and engineering calculations</div>
         <div><strong>Significance:</strong> Demonstrated the promise of automatic sequence control</div>
+      </div>
+
+      <div className="museum-innovation-card">
+        <h4>Computing innovation</h4>
+        <p>The Harvard Mark I showed that a machine could follow a sequence of instructions automatically using rotating shafts and relays. It brought the idea of stored procedure and automatic execution into practical engineering.</p>
+        <ul>
+          <li><strong>Principle:</strong> Sequential execution and stored control</li>
+          <li><strong>Legacy:</strong> Instruction sequencing and early computer architecture</li>
+        </ul>
+      </div>
+
+      <div className="museum-innovation-card">
+        <h4>Legacy</h4>
+        <p>The Mark I helped make automatic operation feel routine. Its approach to sequencing and stored instructions shaped later computer design and software execution models.</p>
       </div>
     </div>
   );

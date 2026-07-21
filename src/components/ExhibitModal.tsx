@@ -8,6 +8,10 @@ import Mark1Machine from './Mark1Machine';
 import EniacMachine from './EniacMachine';
 import UnivacMachine from './UnivacMachine';
 import Timeline from './Timeline';
+import ComputingConceptsGallery from './ComputingConceptsGallery';
+import MachineComparisonCenter from './MachineComparisonCenter';
+import ComputingEvolutionTimeline from './ComputingEvolutionTimeline';
+import CipherToSiliconFinale from './CipherToSiliconFinale';
 
 import '../styles/exhibit-modal.css';
 import type { RoomHotspot } from '../data/rooms';
@@ -41,6 +45,14 @@ function exhibitForKey(key?: string, hotspot?: RoomHotspot) {
       return <UnivacMachine />;
     case 'timeline':
       return <Timeline />;
+    case 'concepts':
+      return <ComputingConceptsGallery />;
+    case 'comparison':
+      return <MachineComparisonCenter />;
+    case 'evolution':
+      return <ComputingEvolutionTimeline />;
+    case 'finale':
+      return <CipherToSiliconFinale />;
     default:
       return null;
   }

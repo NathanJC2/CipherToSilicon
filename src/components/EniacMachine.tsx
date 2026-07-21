@@ -198,11 +198,30 @@ const EniacMachine: React.FC = () => {
         <input type="text" value={program} className="rotor-input" onChange={(e) => setProgram(e.target.value)} placeholder="Example: ADD 13, 27" />
       </div>
 
+      <div className="museum-innovation-card">
+        <h4>Why this machine was needed</h4>
+        <p>As problems became too varied and too large for a single fixed-purpose machine, engineers needed a machine that could be reconfigured for different calculations instead of being dedicated to one task.</p>
+      </div>
+
       <div className="simulator-metadata">
         <div><strong>Year:</strong> 1945</div>
         <div><strong>Developers:</strong> John Mauchly and J. Presper Eckert</div>
         <div><strong>Purpose:</strong> Large-scale scientific and military calculation</div>
         <div><strong>Significance:</strong> Demonstrated the power of electronic digital computation</div>
+      </div>
+
+      <div className="museum-innovation-card">
+        <h4>Computing innovation</h4>
+        <p>ENIAC proved that electronic machines could be reconfigured for different problems. Its flexible wiring and arithmetic units helped define the idea of general-purpose computation.</p>
+        <ul>
+          <li><strong>Principle:</strong> Reprogrammable electronic data processing</li>
+          <li><strong>Legacy:</strong> Modern instruction-driven computing and flexible software systems</li>
+        </ul>
+      </div>
+
+      <div className="museum-innovation-card">
+        <h4>Legacy</h4>
+        <p>ENIAC helped make the idea of a universal machine feel practical. Its flexible design set the stage for later general-purpose computers and the software-driven world that followed.</p>
       </div>
     </div>
   );

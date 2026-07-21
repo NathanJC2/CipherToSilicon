@@ -16,8 +16,39 @@ const CipherLab: React.FC = () => {
     <section id="simulator" className="active">
       <h2 className="section-title">Cipher Lab: Interactive Museum Exhibit</h2>
       <p className="section-description">
-        Step through the evolution of encryption from classical hand ciphers to the WWII Enigma machine, with future computing exhibits previewed below.
+        Follow the story from secret writing to machine-assisted computation: each new cryptographic challenge pushed engineers to build faster, more automated machines.
       </p>
+
+      <div className="museum-narrative-card">
+        <h3 className="museum-narrative-card__title">Why computing was needed</h3>
+        <p>
+          As ciphers became more complex, humans could no longer test every possible key by hand. The need to search, compare, and verify patterns quickly led to the invention of machines that could automate logic, memory, and calculation.
+        </p>
+        <div className="museum-narrative-card__flow">
+          <span>Caesar</span>
+          <span>→</span>
+          <span>Vigenère</span>
+          <span>→</span>
+          <span>Rotor machines</span>
+          <span>→</span>
+          <span>Bombe</span>
+          <span>→</span>
+          <span>Colossus</span>
+          <span>→</span>
+          <span>Modern computers</span>
+        </div>
+      </div>
+
+      <div className="museum-innovation-card">
+        <h4>Computing through cryptography</h4>
+        <p>The museum now includes a second layer that explains how each cryptographic breakthrough introduced computational ideas such as automation, logic, memory, sequential processing, and programmability.</p>
+        <div className="button-group">
+          <button className="btn btn-secondary" onClick={() => window.dispatchEvent(new CustomEvent('museum-open-exhibit', { detail: { exhibitKey: 'concepts', title: 'Computing Concepts Gallery' } }))}>Open concepts gallery</button>
+          <button className="btn btn-secondary" onClick={() => window.dispatchEvent(new CustomEvent('museum-open-exhibit', { detail: { exhibitKey: 'comparison', title: 'Machine Comparison Center' } }))}>Open comparison center</button>
+          <button className="btn btn-secondary" onClick={() => window.dispatchEvent(new CustomEvent('museum-open-exhibit', { detail: { exhibitKey: 'evolution', title: 'Computing Evolution Timeline' } }))}>Open evolution timeline</button>
+          <button className="btn btn-secondary" onClick={() => window.dispatchEvent(new CustomEvent('museum-open-exhibit', { detail: { exhibitKey: 'finale', title: 'From Cipher to Silicon' } }))}>Open finale</button>
+        </div>
+      </div>
 
       <div className="lab-tabs" role="tablist">
         <button className={`lab-tab ${activeTab === 'classical' ? 'active' : ''}`} onClick={() => setActiveTab('classical')}>Classical Ciphers</button>
