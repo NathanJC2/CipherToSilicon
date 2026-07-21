@@ -86,3 +86,4 @@ Aiming for a vintage, wartime aesthetic using a monochrome/muted grayscale palet
 *   [Enigma Machine Emulator](https://www.101computing.net/enigma-machine-emulator/)
 *   [National Museum of Fine Arts (Panoramic Display Inspiration)](https://nmfa.nationalmuseum.gov.ph/?fbclid=IwY2xjawTMa2BleHRuA2FlbQIxMQBzcnRjBmFwcF9pZAEwAAEeoA4T0boNXsiYvGKsnJP15aat02wvEZxTCl-_2vttHcj7zTLY24QOa8RP3Es_aem_1vKiR7KrYdZSnsPZrIhaLg)
 *   [Metropolitan Museum of Art 360 (Another Panoramic Display Inspiration)](https://www.360cities.net/image/metropolitan-museum-of-art?__cf_chl_tk=HToqsa.6oGb_RhwEHYORfnD7l_zNYlpiPj0SnfkaRv4-1784646716-1.0.1.1-QVDJx.yGR.qww.420TajWHsOI7um59UdAYI.4kYDwIo&fbclid=IwY2xjawTMbOhleHRuA2FlbQIxMQBzcnRjBmFwcF9pZAEwAAEel65DVJoA3amZvP5Te1xNgWUOU6ku09RMDWWNkSQ80_YNQjhGUXt_SXt8aiU_aem_HtaJsqbh5NOTl1msw_ULHA)
+*   [Virtual UNIVAC Emulator](https://www.masswerk.at/virtualunivac/)
