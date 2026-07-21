@@ -100,14 +100,14 @@ section.active {
     font-family: 'Cormorant Garamond', 'Times New Roman', serif;
     font-size: 2.2rem;
     margin-bottom: 1.5rem;
-    color: #1A1A1A;
-    border-bottom: 3px solid #8E8E8E;
+    color: #F5F5F5;
+    border-bottom: 3px solid rgba(255,255,255,0.24);
     padding-bottom: 1rem;
 }
 
 .section-description {
     font-size: 1.1rem;
-    color: #4A4A4A;
+    color: #F5F5F5;
     margin-bottom: 2rem;
     line-height: 1.8;
 }
