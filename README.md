@@ -63,8 +63,12 @@ Aiming for a vintage, wartime aesthetic using a monochrome/muted grayscale palet
 *   **Codebreaking UI:** Clues are styled as classified manila dossiers, while input fields use terminal-style text boxes.
 *   **Difficulty Scaling:** Subtle visual static is added to the background as cryptographic concepts increase in difficulty.
 
+---
+
 ### Aha Moments
 *   While developing the project, we realized that interactive learning works much better for this topic than just presenting information as text. Cryptography can be difficult to understand by only reading about it, so giving users the chance to enter a message, change the cipher settings, and immediately see the encrypted output makes the concepts much easier to understand. We also realized that the history of cryptography is closely connected to the history of computing. At first, we thought the project would mainly focus on the development of encryption, but as we worked on the exhibits, we saw how the increasing complexity of encryption led to the need for faster and more powerful computers.
+
+---
 
 ### Challenges Encountered
 *   One of the biggest challenges we encountered as a group was organizing a large amount of historical information while keeping the interface easy to use. We also had to make several changes to the timeline during development. We encountered problems with the formatting, image display, text visibility, and overall layout, so we spent time making adjustments until everything became easier to read and navigate. Another challenge was keeping the design consistent throughout the project. Since the virtual museum has different sections and interactive features, we had to make sure that the colors, fonts, backgrounds, and layouts matched each other so the whole project looked organized and connected.
