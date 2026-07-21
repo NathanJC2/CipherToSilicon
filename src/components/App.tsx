@@ -62,9 +62,21 @@ const App: React.FC = () => {
     setActiveSection('panorama');
   };
 
+  const resolveAssetPath = (path?: string) => {
+    if (!path) return undefined;
+    const normalizedPath = path.startsWith('/') ? path : `/${path}`;
+    const base = import.meta.env.BASE_URL || '/';
+
+    if (base === '/' || normalizedPath.startsWith(base)) {
+      return normalizedPath;
+    }
+
+    return `${base.replace(/\/$/, '')}${normalizedPath}`;
+  };
+
   useEffect(() => {
     const handleOpenExhibit = (event: Event) => {
-      const customEvent = event as CustomEvent<{ exhibitKey?: string; title?: string }>;
+      const customEvent = event as CustomEvent<{ exhibitKey?: string; title?: string; image?: string }>;
       const exhibitKey = customEvent.detail?.exhibitKey;
 
       if (!exhibitKey) return;
@@ -75,6 +87,7 @@ const App: React.FC = () => {
         title: customEvent.detail?.title ?? exhibitKey,
         description: `Open the ${customEvent.detail?.title ?? exhibitKey} experience.`,
         exhibitKey,
+        image: resolveAssetPath(customEvent.detail?.image),
       });
     };
 
