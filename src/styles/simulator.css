@@ -374,12 +374,18 @@
     color: #1e3a8a;
 }
 
+.museum-narrative-card p {
+    margin: 0;
+    line-height: 1.7;
+    color: #111111;
+}
+
 .museum-narrative-card__flow {
     display: flex;
     flex-wrap: wrap;
     gap: 0.4rem;
     margin-top: 0.75rem;
-    color: #334155;
+    color: #111111;
     font-size: 0.92rem;
 }
 
