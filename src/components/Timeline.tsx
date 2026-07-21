@@ -36,56 +36,56 @@ const timelineData: TimelineEvent[] = [
   },
   {
     title: 'Al-Kindi And Frequency Analysis (c. 850)',
-    body: 'Al-Kindi documented frequency analysis, using statistical patterns in language to break substitution ciphers. This transformed codebreaking from guesswork into methodical analysis, an important step toward data-oriented and computational problem solving.',
+    body: 'Al-Kindi documented frequency analysis, using statistical patterns in language to break substitution ciphers. This transformed codebreaking from guesswork into methodical analysis, an idea that would later influence computation and algorithms.',
     image: getAssetUrl('al-kindi-frequency.jpg'),
     imageAlt: 'Arabic manuscript with letter frequency notes',
     caption: 'Suggested image: historical manuscript or reconstructed frequency table.'
   },
   {
     title: 'Polyalphabetic Cipher Concepts (1467)',
-    body: 'Leone Alberti described rotating alphabets, an idea that increased cipher complexity compared with single-shift methods. This shift from simple substitution to changing state is conceptually similar to stateful transformations used in modern computation.',
+    body: 'Leone Alberti described rotating alphabets, an idea that increased cipher complexity compared with single-shift methods. This shift from simple substitution to changing state is conceptually related to machine states and program variables.',
     image: getAssetUrl('alberti-disk.jpg'),
     imageAlt: 'Alberti cipher disk illustration',
     caption: 'Suggested image: Alberti disk or rotating alphabet diagram.'
   },
   {
     title: 'Vigenere Cipher Popularized (1586)',
-    body: 'The Vigenere method became a benchmark of stronger manual encryption by changing shifts through a keyword. It remained influential for centuries and pushed analysts to develop deeper pattern-search strategies.',
+    body: 'The Vigenere method became a benchmark of stronger manual encryption by changing shifts through a keyword. It remained influential for centuries and pushed analysts to develop deeper pattern-recognition techniques.',
     image: getAssetUrl('vigenere-table.jpg'),
     imageAlt: 'Tabula recta for Vigenere encryption',
     caption: 'Suggested image: tabula recta and keyword-based encryption example.'
   },
   {
     title: 'Babbage Breaks Vigenere (1854)',
-    body: 'Charles Babbage applied systematic analysis to break the Vigenere cipher long before it became widely known. His approach reinforced the relationship between mathematical methods, data analysis, and proto-computational problem solving.',
+    body: 'Charles Babbage applied systematic analysis to break the Vigenere cipher long before it became widely known. His approach reinforced the relationship between mathematical methods, data organization, and computation—themes that would define his design of the Analytical Engine.',
     image: getAssetUrl('babbage-notes.jpg'),
     imageAlt: 'Babbage notebooks and analytical diagrams',
     caption: 'Suggested image: Babbage notes or historical cryptanalysis worksheet.'
   },
   {
     title: 'Rotor Machine Era (1917-1920s)',
-    body: 'Rotor machines such as Hebern designs and Enigma mechanized complex substitution. Each keypress changed the internal state, creating large keyspaces and operational complexity that demanded more systematic and eventually mechanized codebreaking.',
+    body: 'Rotor machines such as Hebern designs and Enigma mechanized complex substitution. Each keypress changed the internal state, creating large keyspaces and operational complexity that demanded automated analysis methods.',
     image: getAssetUrl('rotor-machine.jpg'),
     imageAlt: 'Electromechanical rotor cipher machine',
     caption: 'Suggested image: Hebern/Enigma machine close-up with rotors visible.'
   },
   {
     title: 'Bletchley Park And Early Machines (1940s)',
-    body: 'Codebreakers at Bletchley Park used electromechanical Bombe systems and the electronic Colossus machine to automate parts of cryptanalysis. Their work demonstrated that information problems could be attacked with programmable, machine-driven logic.',
+    body: 'Codebreakers at Bletchley Park used electromechanical Bombe systems and the electronic Colossus machine to automate parts of cryptanalysis. Their work demonstrated that information problems could be solved by building special-purpose computing machines.',
     image: getAssetUrl('bletchley-colossus.jpg'),
     imageAlt: 'Bletchley Park room with Colossus/Bombe equipment',
     caption: 'Suggested image: Bletchley Park operations or Colossus reconstruction.'
   },
   {
     title: 'Information Theory (1948)',
-    body: 'Claude Shannon formalized information theory and analyzed secrecy systems mathematically. His work connected communication, probability, and computation, becoming foundational for computer science, digital communication, and modern cryptography.',
+    body: 'Claude Shannon formalized information theory and analyzed secrecy systems mathematically. His work connected communication, probability, and computation, becoming foundational for computing theory and cryptographic science.',
     image: getAssetUrl('shannon-diagram.jpg'),
     imageAlt: 'Information source-channel-receiver model diagram',
     caption: 'Suggested image: Shannon communication model or entropy visualization.'
   },
   {
     title: 'Public-Key Breakthrough (1976-1977)',
-    body: 'Diffie-Hellman introduced practical key exchange, and RSA provided scalable public-key encryption and signatures. These breakthroughs enabled secure communication between computers that had never shared a secret beforehand.',
+    body: 'Diffie-Hellman introduced practical key exchange, and RSA provided scalable public-key encryption and signatures. These breakthroughs enabled secure communication between computers that had never met, transforming cryptography from a shared-secret model into a mathematical one.',
     image: getAssetUrl('public-key.jpg'),
     imageAlt: 'Public-key encryption concept with key pairs',
     caption: 'Suggested image: public-key exchange flow diagram.'
