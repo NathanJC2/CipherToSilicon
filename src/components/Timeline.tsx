@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 type TimelineEvent = {
   title: string;
   body: string;
-  image?: string;
+  imageFile?: string;
   imageAlt?: string;
   caption?: string;
 };
@@ -20,94 +20,88 @@ type EraDefinition = {
   checkpointAnswer: string;
 };
 
-const getAssetUrl = (path: string) => {
-  const normalizedPath = path.replace(/^\/+/, '');
-  const base = import.meta.env.BASE_URL || '/';
-  return `${base}${normalizedPath}`;
-};
-
 const timelineData: TimelineEvent[] = [
   {
     title: 'Caesar Cipher (c. 50 BCE)',
     body: 'The Caesar cipher is one of the earliest known substitution systems. By shifting letters by a fixed amount, it introduces a repeatable encryption rule. This idea, a rule-based transformation of symbols, is a conceptual ancestor of later algorithmic thinking in computing.',
-    image: getAssetUrl('caesar-cipher.jpg'),
+    imageFile: 'caesar-cipher.jpg',
     imageAlt: 'Roman inscription and shifted alphabet concept diagram',
     caption: 'Suggested image: Roman era cipher wheel or Caesar shift alphabet chart.'
   },
   {
     title: 'Al-Kindi And Frequency Analysis (c. 850)',
     body: 'Al-Kindi documented frequency analysis, using statistical patterns in language to break substitution ciphers. This transformed codebreaking from guesswork into methodical analysis, an idea that would later influence computation and algorithms.',
-    image: getAssetUrl('al-kindi-frequency.jpg'),
+    imageFile: 'al-kindi-frequency.jpg',
     imageAlt: 'Arabic manuscript with letter frequency notes',
     caption: 'Suggested image: historical manuscript or reconstructed frequency table.'
   },
   {
     title: 'Polyalphabetic Cipher Concepts (1467)',
     body: 'Leone Alberti described rotating alphabets, an idea that increased cipher complexity compared with single-shift methods. This shift from simple substitution to changing state is conceptually related to machine states and program variables.',
-    image: getAssetUrl('alberti-disk.jpg'),
+    imageFile: 'alberti-disk.jpg',
     imageAlt: 'Alberti cipher disk illustration',
     caption: 'Suggested image: Alberti disk or rotating alphabet diagram.'
   },
   {
     title: 'Vigenere Cipher Popularized (1586)',
     body: 'The Vigenere method became a benchmark of stronger manual encryption by changing shifts through a keyword. It remained influential for centuries and pushed analysts to develop deeper pattern-recognition techniques.',
-    image: getAssetUrl('vigenere-table.jpg'),
+    imageFile: 'vigenere-table.jpg',
     imageAlt: 'Tabula recta for Vigenere encryption',
     caption: 'Suggested image: tabula recta and keyword-based encryption example.'
   },
   {
     title: 'Babbage Breaks Vigenere (1854)',
     body: 'Charles Babbage applied systematic analysis to break the Vigenere cipher long before it became widely known. His approach reinforced the relationship between mathematical methods, data organization, and computation—themes that would define his design of the Analytical Engine.',
-    image: getAssetUrl('babbage-notes.jpg'),
+    imageFile: 'babbage-notes.jpg',
     imageAlt: 'Babbage notebooks and analytical diagrams',
     caption: 'Suggested image: Babbage notes or historical cryptanalysis worksheet.'
   },
   {
     title: 'Rotor Machine Era (1917-1920s)',
     body: 'Rotor machines such as Hebern designs and Enigma mechanized complex substitution. Each keypress changed the internal state, creating large keyspaces and operational complexity that demanded automated analysis methods.',
-    image: getAssetUrl('rotor-machine.jpg'),
+    imageFile: 'rotor-machine.jpg',
     imageAlt: 'Electromechanical rotor cipher machine',
     caption: 'Suggested image: Hebern/Enigma machine close-up with rotors visible.'
   },
   {
     title: 'Bletchley Park And Early Machines (1940s)',
     body: 'Codebreakers at Bletchley Park used electromechanical Bombe systems and the electronic Colossus machine to automate parts of cryptanalysis. Their work demonstrated that information problems could be solved by building special-purpose computing machines.',
-    image: getAssetUrl('bletchley-colossus.jpg'),
+    imageFile: 'bletchley-colossus.jpg',
     imageAlt: 'Bletchley Park room with Colossus/Bombe equipment',
     caption: 'Suggested image: Bletchley Park operations or Colossus reconstruction.'
   },
   {
     title: 'Information Theory (1948)',
     body: 'Claude Shannon formalized information theory and analyzed secrecy systems mathematically. His work connected communication, probability, and computation, becoming foundational for computing theory and cryptographic science.',
-    image: getAssetUrl('shannon-diagram.jpg'),
+    imageFile: 'shannon-diagram.jpg',
     imageAlt: 'Information source-channel-receiver model diagram',
     caption: 'Suggested image: Shannon communication model or entropy visualization.'
   },
   {
     title: 'Public-Key Breakthrough (1976-1977)',
     body: 'Diffie-Hellman introduced practical key exchange, and RSA provided scalable public-key encryption and signatures. These breakthroughs enabled secure communication between computers that had never met, transforming cryptography from a shared-secret model into a mathematical one.',
-    image: getAssetUrl('public-key.jpg'),
+    imageFile: 'public-key.jpg',
     imageAlt: 'Public-key encryption concept with key pairs',
     caption: 'Suggested image: public-key exchange flow diagram.'
   },
   {
     title: 'PGP And Personal Encryption (1991)',
     body: 'Pretty Good Privacy (PGP) brought strong cryptography to personal computers and email, making end-user security practical. It marked a social and technical shift where cryptography moved from state and military contexts into everyday civilian computing.',
-    image: getAssetUrl('pgp-email.jpg'),
+    imageFile: 'pgp-email.jpg',
     imageAlt: 'Encrypted email interface illustration',
     caption: 'Suggested image: PGP keyring screenshot or encrypted email demo.'
   },
   {
     title: 'SSL/TLS Secures The Web (1994-2001)',
     body: 'SSL and later TLS standardized encrypted web sessions, enabling secure shopping, banking, and authentication online. The padlock model became a familiar symbol of trust for mainstream internet users.',
-    image: getAssetUrl('ssl-tls-web.jpg'),
+    imageFile: 'ssl-tls-web.jpg',
     imageAlt: 'Browser lock icon and HTTPS exchange diagram',
     caption: 'Suggested image: HTTPS handshake diagram or early browser security indicator.'
   },
   {
     title: 'Internet Security Age (1990s-Present)',
     body: 'From SSL/TLS to encrypted messaging, cryptography became a core layer of internet computing. Secure protocols now protect software updates, banking, cloud services, identity systems, and private communication across global networks.',
-    image: getAssetUrl('internet-security.jpg'),
+    imageFile: 'internet-security.jpg',
     imageAlt: 'Modern network security dashboard and encrypted traffic',
     caption: 'Suggested image: modern network map with encrypted channels.'
   }
@@ -159,6 +153,11 @@ const Timeline: React.FC = () => {
   const [viewed, setViewed] = useState<Set<number>>(new Set());
   const [modalIndex, setModalIndex] = useState<number | null>(null);
   const [feedback, setFeedback] = useState<{ text: string; tone: 'success' | 'info' | 'error' }>({ text: 'Begin with the Classical Era and answer its checkpoint to unlock the next era.', tone: 'info' });
+
+  const getAssetUrl = (filename: string) => {
+    const base = import.meta.env.BASE_URL || '/';
+    return `${base}${filename}`;
+  };
 
   const total = timelineData.length;
   const currentEra = eras.find((era) => era.id === activeEra) ?? eras[0];
@@ -309,8 +308,8 @@ const Timeline: React.FC = () => {
             <span className="modal-close" onClick={closeModal}>&times;</span>
             <h2 className="modal-title">{timelineData[modalIndex].title}</h2>
             <div className="timeline-modal-media">
-              {timelineData[modalIndex].image ? (
-                <img id="modalImage" className="timeline-modal-image" src={timelineData[modalIndex].image} alt={timelineData[modalIndex].imageAlt} />
+              {timelineData[modalIndex].imageFile ? (
+                <img id="modalImage" className="timeline-modal-image" src={getAssetUrl(timelineData[modalIndex].imageFile!)} alt={timelineData[modalIndex].imageAlt} />
               ) : (
                 <div id="modalImagePlaceholder" className="timeline-modal-image-placeholder">Add Image Here</div>
               )}
