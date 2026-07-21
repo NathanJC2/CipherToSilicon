@@ -1,17 +1,20 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Navigation from './Navigation';
 import CipherLab from './CipherLab';
 import Timeline from './Timeline';
 import Challenge from './Challenge';
 import MuseumMap from './MuseumMap';
 import RoomViewerFullscreen from './RoomViewerFullscreen';
+import ExhibitModal from './ExhibitModal';
 import LoadingScreen from './LoadingScreen';
+import type { RoomHotspot } from '../data/rooms';
 
 const App: React.FC = () => {
   // section state used as "intent" to open panels (not to navigate away)
   const [activeSection, setActiveSection] = useState<'panorama' | 'map' | 'simulator' | 'timeline' | 'challenge'>('panorama');
   const [activeRoom, setActiveRoom] = useState<string | null>(null);
   const [isLoadingPanorama, setIsLoadingPanorama] = useState(false);
+  const [activeExhibit, setActiveExhibit] = useState<RoomHotspot | null>(null);
 
   // Controlled visibility state for panels so nav tabs can open them
   const [mapVisible, setMapVisible] = useState(false);
@@ -59,6 +62,26 @@ const App: React.FC = () => {
     setActiveSection('panorama');
   };
 
+  useEffect(() => {
+    const handleOpenExhibit = (event: Event) => {
+      const customEvent = event as CustomEvent<{ exhibitKey?: string; title?: string }>;
+      const exhibitKey = customEvent.detail?.exhibitKey;
+
+      if (!exhibitKey) return;
+
+      setActiveExhibit({
+        id: `app-${exhibitKey}`,
+        type: 'info',
+        title: customEvent.detail?.title ?? exhibitKey,
+        description: `Open the ${customEvent.detail?.title ?? exhibitKey} experience.`,
+        exhibitKey,
+      });
+    };
+
+    window.addEventListener('museum-open-exhibit', handleOpenExhibit);
+    return () => window.removeEventListener('museum-open-exhibit', handleOpenExhibit);
+  }, []);
+
   const showPanelShell = mapVisible || cipherVisible || timelineVisible || challengeVisible;
 
   return (
@@ -97,6 +120,13 @@ const App: React.FC = () => {
             {challengeVisible && <Challenge />}
           </div>
         </div>
+      )}
+
+      {activeExhibit && (
+        <ExhibitModal
+          hotspot={activeExhibit}
+          onClose={() => setActiveExhibit(null)}
+        />
       )}
     </>
   );
