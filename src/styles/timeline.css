@@ -7,12 +7,13 @@
     margin-left: -50vw;
     margin-right: -50vw;
     width: 100vw;
-    background-color: white;
+    background: linear-gradient(135deg, #fdfcf8 0%, #f3ebdc 100%);
     border: 2px solid #D4D4D4;
     border-radius: 8px;
     padding: 3rem clamp(1rem, 5vw, 3rem);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-image: radial-gradient(circle at 10% 10%, rgba(26, 26, 26, 0.04) 0, transparent 38%);
+    color: #121212;
 }
 
 .timeline {
@@ -238,6 +239,7 @@
 
 .timeline-content {
     background-color: #F5F5F5;
+    color: #121212;
     padding: 1.5rem;
     border-left: 3px solid #8E8E8E;
     border-radius: 4px;

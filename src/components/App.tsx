@@ -86,7 +86,7 @@ const App: React.FC = () => {
         <div className="panel-shell" role="dialog" aria-label="Museum content panel">
           <div className="panel-shell__topbar">
             <button type="button" className="panel-shell__back" onClick={goBackToPanorama}>
-              ← Back to panorama
+              ← Back to exhibit
             </button>
           </div>
 
@@ -103,3 +103,5 @@ const App: React.FC = () => {
 };
 
 export default App;
+
+// hi

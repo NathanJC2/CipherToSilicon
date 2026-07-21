@@ -15,8 +15,8 @@
 .floating-header {
   top: var(--spacing-lg);
   left: var(--spacing-lg);
-  max-width: 320px;
-  padding: var(--spacing-md);
+  max-width: 340px;
+  padding: 1rem 1rem 1.1rem;
 }
 
 .header-logo {
@@ -51,17 +51,19 @@
 
 .room-title {
   font-family: var(--font-display);
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   color: var(--text-primary);
   margin: 0;
-  line-height: 1.2;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
 }
 
 .room-description {
-  font-size: 0.85rem;
+  font-size: 0.86rem;
   color: var(--text-secondary);
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.6;
+  max-width: 32ch;
 }
 
 /* Floating navigation */
@@ -70,8 +72,8 @@
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: var(--spacing-sm);
-  padding: var(--spacing-sm) var(--spacing-md);
+  gap: 0.6rem;
+  padding: 0.6rem 0.8rem;
   align-items: center;
 }
 
@@ -79,12 +81,13 @@
   background: var(--glass-bg-light);
   border: 1px solid var(--glass-border);
   color: var(--text-primary);
-  padding: var(--spacing-sm) var(--spacing-md);
+  padding: 0.65rem 0.95rem;
   border-radius: var(--radius-md);
   cursor: pointer;
   font-family: var(--font-mono);
   font-weight: 600;
-  font-size: 0.85rem;
+  font-size: 0.84rem;
+  letter-spacing: 0.01em;
   transition: all var(--transition-fast);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -225,10 +228,10 @@
 
 .loading-content h1 {
   font-family: var(--font-display);
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   color: var(--text-primary);
   margin: 0;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 .loading-content p {
@@ -238,6 +241,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
+  line-height: 1.6;
 }
 
 .loading-spinner {
