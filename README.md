@@ -6,6 +6,7 @@
 ## Disclosure on use of AI
 In the development of this project Artificial Intelligence (AI) tools were utilized to assist with tasks such as,
 brainstorming conceptual layouts, formatting texts, and for refining the document structure.
+
    **AI Tools used:**
    
 ---
