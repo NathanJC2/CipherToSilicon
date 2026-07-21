@@ -240,7 +240,7 @@ export const rooms: RoomConfig[] = [
         y: 36,
         title: 'Bombe',
         description: 'The Bombe helped Allied codebreakers test Enigma settings rapidly.',
-        image: assetPath('/bletchley-colossus.jpg'),
+        image: assetPath('/Bombe.jpg'),
         buttonLabel: 'Open Exhibit',
         exhibitKey: 'bombe'
       },
@@ -312,7 +312,7 @@ export const rooms: RoomConfig[] = [
         y: 36,
         title: 'Harvard Mark I',
         description: 'The Harvard Mark I was an early electromechanical computer used for scientific calculations.',
-        image: assetPath('/rotor-machine.jpg'),
+        image: assetPath('/Harvard.jpg'),
         buttonLabel: 'Open Exhibit',
         exhibitKey: 'mark1'
       },
@@ -348,7 +348,7 @@ export const rooms: RoomConfig[] = [
         y: 34,
         title: 'ENIAC',
         description: 'ENIAC was one of the first electronic digital computers, built for ballistic and scientific calculations.',
-        image: assetPath('/bletchley-colossus.jpg'),
+        image: assetPath('/ENIAC.jpg'),
         buttonLabel: 'Open Exhibit',
         exhibitKey: 'eniac'
       },
@@ -384,7 +384,7 @@ export const rooms: RoomConfig[] = [
         y: 36,
         title: 'UNIVAC I',
         description: 'UNIVAC I was the first commercially produced computer in the US and brought computing to business and government.',
-        image: assetPath('/bletchley-colossus.jpg'),
+        image: assetPath('/UNIVAC.jpg'),
         buttonLabel: 'Open Exhibit',
         exhibitKey: 'univac'
       },
@@ -429,7 +429,7 @@ export const rooms: RoomConfig[] = [
         y: 34,
         title: 'Computing Concepts Gallery',
         description: 'A gallery of ideas that emerged as cryptography demanded faster and more systematic computation.',
-        image: assetPath('/rotor-machine.jpg'),
+        image: assetPath('/concepts.jpg'),
         buttonLabel: 'Open Gallery',
         exhibitKey: 'concepts'
       },
@@ -465,7 +465,7 @@ export const rooms: RoomConfig[] = [
         y: 34,
         title: 'Machine Comparison Center',
         description: 'See how each machine contributed to the evolution of computing.',
-        image: assetPath('/bletchley-colossus.jpg'),
+        image: assetPath('/comparison.jpg'),
         buttonLabel: 'Open Comparator',
         exhibitKey: 'comparison'
       },
@@ -501,7 +501,7 @@ export const rooms: RoomConfig[] = [
         y: 34,
         title: 'From Cipher to Silicon',
         description: 'A concluding gallery connecting cryptography and modern computing.',
-        image: assetPath('/internet-security.jpg'),
+        image: assetPath('/Finale.jpg'),
         buttonLabel: 'Open Finale',
         exhibitKey: 'finale'
       },

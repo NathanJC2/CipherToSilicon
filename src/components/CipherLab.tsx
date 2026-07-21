@@ -43,10 +43,10 @@ const CipherLab: React.FC = () => {
         <h4>Computing through cryptography</h4>
         <p>The museum now includes a second layer that explains how each cryptographic breakthrough introduced computational ideas such as automation, logic, memory, sequential processing, and programmability.</p>
         <div className="button-group">
-          <button className="btn btn-secondary" onClick={() => window.dispatchEvent(new CustomEvent('museum-open-exhibit', { detail: { exhibitKey: 'concepts', title: 'Computing Concepts Gallery' } }))}>Open concepts gallery</button>
-          <button className="btn btn-secondary" onClick={() => window.dispatchEvent(new CustomEvent('museum-open-exhibit', { detail: { exhibitKey: 'comparison', title: 'Machine Comparison Center' } }))}>Open comparison center</button>
-          <button className="btn btn-secondary" onClick={() => window.dispatchEvent(new CustomEvent('museum-open-exhibit', { detail: { exhibitKey: 'evolution', title: 'Computing Evolution Timeline' } }))}>Open evolution timeline</button>
-          <button className="btn btn-secondary" onClick={() => window.dispatchEvent(new CustomEvent('museum-open-exhibit', { detail: { exhibitKey: 'finale', title: 'From Cipher to Silicon' } }))}>Open finale</button>
+          <button className="btn btn-secondary" onClick={() => window.dispatchEvent(new CustomEvent('museum-open-exhibit', { detail: { exhibitKey: 'concepts', title: 'Computing Concepts Gallery', image: '/Command.jpg' } }))}>Open concepts gallery</button>
+          <button className="btn btn-secondary" onClick={() => window.dispatchEvent(new CustomEvent('museum-open-exhibit', { detail: { exhibitKey: 'comparison', title: 'Machine Comparison Center', image: '/compare.jpg' } }))}>Open comparison center</button>
+          <button className="btn btn-secondary" onClick={() => window.dispatchEvent(new CustomEvent('museum-open-exhibit', { detail: { exhibitKey: 'evolution', title: 'Computing Evolution Timeline', image: '/evolve.jpg' } }))}>Open evolution timeline</button>
+          <button className="btn btn-secondary" onClick={() => window.dispatchEvent(new CustomEvent('museum-open-exhibit', { detail: { exhibitKey: 'finale', title: 'From Cipher to Silicon', image: '/final.jpg' } }))}>Open finale</button>
         </div>
       </div>
 
