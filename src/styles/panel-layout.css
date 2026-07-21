@@ -82,6 +82,7 @@
   border: 1px solid rgba(18, 18, 18, 0.12);
   border-radius: 16px;
 <<<<<<< HEAD
+<<<<<<< HEAD
   padding: 1rem;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
@@ -89,6 +90,8 @@
 .panel-shell__content .challenge-container .encrypted-message {
   color: #f5f5f5;
 =======
+=======
+>>>>>>> 7b24a6ca1307413bb4bb5f2c4f7d1f48e706e811
   padding: 1.1rem;
   margin-top: 0.4rem;
 }
@@ -107,6 +110,9 @@
 .site-footer__credits {
   margin: 0.25rem 0;
   line-height: 1.6;
+<<<<<<< HEAD
+>>>>>>> 7b24a6ca1307413bb4bb5f2c4f7d1f48e706e811
+=======
 >>>>>>> 7b24a6ca1307413bb4bb5f2c4f7d1f48e706e811
 }
 
